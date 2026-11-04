@@ -1,5 +1,5 @@
 /* Public application resources only. Auth, RPCs and user data bypass this cache. */
-const VERSION="2b8f41fd9e03bccd0639e5ee";
+const VERSION="06856dae6e6c1699dad18e59";
 const ASSETS=["index.html","assets/audio/menu.mp3","assets/audio/map.mp3","manifest.webmanifest","icons/icon.svg"];
 const BASE=new URL(self.registration.scope);
 const PREFIX='geodecoder-offline:'+BASE.pathname+':';

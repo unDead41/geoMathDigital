@@ -1,11 +1,9 @@
-# GeoMath Digital v2.9.1
+# GeoMath Digital
 
-[Play GeoMath](https://undead41.github.io/geodecoder-digital/)
+Version **v2.10.0** · learning module **v1.6.2**.
 
-All 40 views follow the approved mockup composition, with module v1.6.2, the shared design system and the existing learning, classroom and Duel flows.
+Play: https://undead41.github.io/geodecoder-digital/
 
-The complete PWA includes the service worker, manifest, icon and both audio tracks. Once preparation succeeds, the learning website can reload offline. IndexedDB keeps local records separate for each account.
+Email/username and Google sign-in are available. New Google users complete their own classroom profile. Phone/SMS sign-in has been removed. Guest play and learning activities remain available.
 
-Verified runtime source: `37bc2cd262cc0a54e8ee31339ea37471c1ecfda5`, private `unDead41/geodecoder`, branch `main-digitalized`. Exact artifact hashes and verification are recorded in `release.json`.
-
-Cloud synchronization and newer classroom actions require their corresponding backend rollout. This frontend publication records that rollout separately from the website and offline package.
+This public repository contains only the verified built frontend, PWA worker, icons and audio. Source, tests and backend definitions are maintained in the separate development repository. `release.json` records the exact source commit and artifact hashes. This publication does not change backend credentials or deploy migrations.

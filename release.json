@@ -1,65 +1,64 @@
 {
-  "version": "2.9.1",
+  "version": "2.10.0",
   "sourceRepository": "unDead41/geodecoder",
   "sourceBranch": "main-digitalized",
-  "sourceCommit": "37bc2cd262cc0a54e8ee31339ea37471c1ecfda5",
-  "integrationCommit": "37bc2cd262cc0a54e8ee31339ea37471c1ecfda5",
+  "sourceCommit": "752ce908d16d13acc9cc7510797e8363d182c3f5",
+  "integrationCommit": "752ce908d16d13acc9cc7510797e8363d182c3f5",
   "moduleVersion": "1.6.2",
   "moduleBlob": "3af0469979d878c8e605d093db1be0c0649c6509",
-  "firmwareVersion": "1.1.3",
-  "pagesSourceChanged": true,
-  "profileMigrationApplied": true,
-  "moduleProgressMigrationApplied": true,
-  "digitalV27Migration": {
-    "version": "20261026110959",
-    "name": "geodecoder_digital_v2_7_integration",
-    "applied": true
-  },
-  "duelEdge": {
-    "version": 2,
-    "protocol": 2,
-    "verify_jwt": true
+  "firmwareVersion": "2.0.2",
+  "publishedAt": "2026-11-04T15:20:05.862Z",
+  "websiteSha256": "c04121db006e7352806347cb17ed4f58f88d6faaa0c1bd3ea4be6d35e8634c88",
+  "auth": {
+    "google": true,
+    "email": true,
+    "phone": false,
+    "smsClientRemoved": true,
+    "hostedChangesByThisPublication": false,
+    "profileMigration": {
+      "name": "geodecoder_auth_providers",
+      "hostedVersion": "20261104061744",
+      "alreadyApplied": true
+    },
+    "personalConsentTested": false
   },
   "verification": {
-    "unitTests": 838,
-    "applicationTests": 497,
-    "moduleTests": 341,
-    "applicationTestConcurrency": 1,
+    "applicationTests": 541,
+    "applicationPassed": 541,
+    "applicationFailed": 0,
+    "focusedAuthTests": 85,
     "applicationBuildAndCheck": "PASS",
-    "moduleBuildAndCheck": "PASS",
-    "sourceAndBuiltArtifactHashes": "MATCH",
-    "offlineBrowserScenarios": 7,
-    "browser": "Chromium 153 headless; local synthetic data and controlled transport"
+    "standaloneParity": "PASS",
+    "modulePin": "UNCHANGED_AND_MATCHED",
+    "moduleTests": "not rerun; pinned module unchanged",
+    "browser": "Native Chromium; BM/English login/signup and real Google sign-in page reached",
+    "sourceAndBuiltArtifactHashes": "MATCH"
   },
-  "websiteSha256": "3ecf86533c3d45c8aedd87dd91a272d5bbbbe256fa5cc578fa3dc0d05a77ef0a",
-  "moduleSourceCommit": "7bba111209e15697cb4b704f6cef7c0fb120aa55",
-  "publishedAt": "2026-11-04T13:59:00.483731+00:00",
   "backendRollout": {
     "changedByThisPublication": false,
-    "hostedV29ContractsVerified": false,
-    "sourceRequirements": "https://github.com/unDead41/geodecoder/blob/main-digitalized/digital/docs/integration-sync/SQL_ORDER.md"
+    "hostedV29ContractsVerified": false
   },
   "pwa": {
     "complete": true,
-    "version": "2b8f41fd9e03bccd0639e5ee",
+    "version": "06856dae6e6c1699dad18e59",
     "assets": [
       "index.html",
-      "assets/audio/menu.mp3",
-      "assets/audio/map.mp3",
       "manifest.webmanifest",
-      "icons/icon.svg"
+      "icons/icon.svg",
+      "assets/audio/map.mp3",
+      "assets/audio/menu.mp3"
     ]
   },
   "artifacts": {
     "index.html": {
-      "bytes": 2311336,
-      "sha256": "3ecf86533c3d45c8aedd87dd91a272d5bbbbe256fa5cc578fa3dc0d05a77ef0a",
-      "gitBlob": "1cb3f260f364b99d0b1079543c8a5a003e181d1a"
+      "bytes": 2326425,
+      "sha256": "c04121db006e7352806347cb17ed4f58f88d6faaa0c1bd3ea4be6d35e8634c88",
+      "gitBlob": "4fcd18b53d48ee192b86e0f17635be21e912106c"
     },
     "sw.js": {
       "bytes": 2503,
-      "sha256": "4bdc49e6b8b5c052a78fcbbc8b5aba18301e24cadc807a306398404f86068742",
-      "gitBlob": "4d0f2beb414fa8961eeb379f4f3f0970d034c2bc"
+      "sha256": "5729165c90e8611e37e24e9c77abad971553744d31cc7b13caba2b6eb4fceb41",
+      "gitBlob": "4883871e2b6e809d96f63e0396bb9f4966eed7c2"
     },
     "manifest.webmanifest": {
       "bytes": 346,
@@ -71,15 +70,15 @@
       "sha256": "02e68e283b682bb76ad2fbcd3852e32bb3864db106d6221500e868ae9779552c",
       "gitBlob": "8ba78063ee75c05a136614c112c789e482cc397f"
     },
-    "assets/audio/menu.mp3": {
-      "bytes": 2161058,
-      "sha256": "9843f7da5eb33dcde18e83401debf2d82e1355a07cea0df5e4a696b1e123b0b4",
-      "gitBlob": "84aa7525f2c4a04cfd8ac750ad79fec77353e32f"
-    },
     "assets/audio/map.mp3": {
       "bytes": 2006517,
       "sha256": "a86d0abe511f1ef5291c95b27b8aee42338d9dc5970af03d79fdef8e157aacb4",
       "gitBlob": "0ef77140fbee08967839da0b1a1fa6770e337c18"
+    },
+    "assets/audio/menu.mp3": {
+      "bytes": 2161058,
+      "sha256": "9843f7da5eb33dcde18e83401debf2d82e1355a07cea0df5e4a696b1e123b0b4",
+      "gitBlob": "84aa7525f2c4a04cfd8ac750ad79fec77353e32f"
     }
   }
 }
