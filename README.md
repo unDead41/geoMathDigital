@@ -1,5 +1,11 @@
-# GeoDecoder Digital v2.8.0
+# GeoMath Digital v2.9.1
 
-Play: https://undead41.github.io/geodecoder-digital/
+[Play GeoMath](https://undead41.github.io/geodecoder-digital/)
 
-Central design system, visual help/tutorials, module1.6 Plan/Elevation Studio and Calculation Steps. Runtime source9288d422bc34212fe5b7d6c0a2c6edb129bbd295 in private unDead41/geodecoder/main-digitalized. Rebuilt frontend only; Supabase remains on its verified v2.7 schema and Duel protocol2 Edge. No new backend migration is required by v2.8.
+All 40 views follow the approved mockup composition, with module v1.6.2, the shared design system and the existing learning, classroom and Duel flows.
+
+The complete PWA includes the service worker, manifest, icon and both audio tracks. Once preparation succeeds, the learning website can reload offline. IndexedDB keeps local records separate for each account.
+
+Verified runtime source: `37bc2cd262cc0a54e8ee31339ea37471c1ecfda5`, private `unDead41/geodecoder`, branch `main-digitalized`. Exact artifact hashes and verification are recorded in `release.json`.
+
+Cloud synchronization and newer classroom actions require their corresponding backend rollout. This frontend publication records that rollout separately from the website and offline package.

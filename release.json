@@ -1,11 +1,11 @@
 {
-  "version": "2.8.0",
+  "version": "2.9.1",
   "sourceRepository": "unDead41/geodecoder",
   "sourceBranch": "main-digitalized",
-  "sourceCommit": "9288d422bc34212fe5b7d6c0a2c6edb129bbd295",
-  "integrationCommit": "f740aded776f2af8930dbcc63c98451ef20a4178",
-  "moduleVersion": "1.6.0",
-  "moduleBlob": "84b23a992e59e709bff7d1df9901f80b937a8471",
+  "sourceCommit": "37bc2cd262cc0a54e8ee31339ea37471c1ecfda5",
+  "integrationCommit": "37bc2cd262cc0a54e8ee31339ea37471c1ecfda5",
+  "moduleVersion": "1.6.2",
+  "moduleBlob": "3af0469979d878c8e605d093db1be0c0649c6509",
   "firmwareVersion": "1.1.3",
   "pagesSourceChanged": true,
   "profileMigrationApplied": true,
@@ -20,14 +20,66 @@
     "protocol": 2,
     "verify_jwt": true
   },
-  "v28BackendChanges": false,
   "verification": {
-    "unitTests": 678,
-    "designBrowserScenarios": 26,
-    "helpBrowserScenarios": 7,
-    "helpBadgeModes": 8,
-    "embeddedTools": "10 interactions,4 phone layouts; BM/English150%",
-    "duel": "PASS isolated two-context lifecycle+invalid-PIN recovery"
+    "unitTests": 838,
+    "applicationTests": 497,
+    "moduleTests": 341,
+    "applicationTestConcurrency": 1,
+    "applicationBuildAndCheck": "PASS",
+    "moduleBuildAndCheck": "PASS",
+    "sourceAndBuiltArtifactHashes": "MATCH",
+    "offlineBrowserScenarios": 7,
+    "browser": "Chromium 153 headless; local synthetic data and controlled transport"
   },
-  "websiteSha256": "bff5e71a21aca1b9a2ba924c90b68d77f608c8d6d7534be44ca7dfb61e4d02c5"
+  "websiteSha256": "3ecf86533c3d45c8aedd87dd91a272d5bbbbe256fa5cc578fa3dc0d05a77ef0a",
+  "moduleSourceCommit": "7bba111209e15697cb4b704f6cef7c0fb120aa55",
+  "publishedAt": "2026-11-04T13:59:00.483731+00:00",
+  "backendRollout": {
+    "changedByThisPublication": false,
+    "hostedV29ContractsVerified": false,
+    "sourceRequirements": "https://github.com/unDead41/geodecoder/blob/main-digitalized/digital/docs/integration-sync/SQL_ORDER.md"
+  },
+  "pwa": {
+    "complete": true,
+    "version": "2b8f41fd9e03bccd0639e5ee",
+    "assets": [
+      "index.html",
+      "assets/audio/menu.mp3",
+      "assets/audio/map.mp3",
+      "manifest.webmanifest",
+      "icons/icon.svg"
+    ]
+  },
+  "artifacts": {
+    "index.html": {
+      "bytes": 2311336,
+      "sha256": "3ecf86533c3d45c8aedd87dd91a272d5bbbbe256fa5cc578fa3dc0d05a77ef0a",
+      "gitBlob": "1cb3f260f364b99d0b1079543c8a5a003e181d1a"
+    },
+    "sw.js": {
+      "bytes": 2503,
+      "sha256": "4bdc49e6b8b5c052a78fcbbc8b5aba18301e24cadc807a306398404f86068742",
+      "gitBlob": "4d0f2beb414fa8961eeb379f4f3f0970d034c2bc"
+    },
+    "manifest.webmanifest": {
+      "bytes": 346,
+      "sha256": "5717eb2b036e9ba0446b238057c17684829f6a47600d6973183bd94c90dc07c6",
+      "gitBlob": "f03b608492a289f80a08881f56c4acda3ed675a8"
+    },
+    "icons/icon.svg": {
+      "bytes": 345,
+      "sha256": "02e68e283b682bb76ad2fbcd3852e32bb3864db106d6221500e868ae9779552c",
+      "gitBlob": "8ba78063ee75c05a136614c112c789e482cc397f"
+    },
+    "assets/audio/menu.mp3": {
+      "bytes": 2161058,
+      "sha256": "9843f7da5eb33dcde18e83401debf2d82e1355a07cea0df5e4a696b1e123b0b4",
+      "gitBlob": "84aa7525f2c4a04cfd8ac750ad79fec77353e32f"
+    },
+    "assets/audio/map.mp3": {
+      "bytes": 2006517,
+      "sha256": "a86d0abe511f1ef5291c95b27b8aee42338d9dc5970af03d79fdef8e157aacb4",
+      "gitBlob": "0ef77140fbee08967839da0b1a1fa6770e337c18"
+    }
+  }
 }
