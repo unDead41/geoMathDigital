@@ -343,6 +343,8 @@ def retire():
     current = refs()
     assert current[PAGES] == PAGES_SHA
     main = current['main']
+    trigger = json.loads((ROOT / 'tools/maintenance/retire-trigger.json').read_text())
+    assert trigger['verified_main_sha'] == main, 'Main advanced after final verification.'
     git('fetch', 'origin', '+refs/heads/*:refs/remotes/origin/*', cwd=ROOT)
     archived = git('ls-remote', URL, 'refs/tags/' + TAG, cwd=ROOT, capture=True).split()[0]
     git('fetch', 'origin', 'refs/tags/' + TAG, cwd=ROOT)

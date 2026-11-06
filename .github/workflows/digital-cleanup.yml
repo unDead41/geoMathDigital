@@ -43,13 +43,20 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 tools/maintenance/digital-cleanup.py publish
+      - name: Collect verification records
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p cleanup-evidence
+          if test -f cleanup-verification.log; then cp cleanup-verification.log cleanup-evidence/; fi
+          if test -f ../digital-cleanup-source/digital/docs/maintenance/CLEANUP.json; then
+            cp ../digital-cleanup-source/digital/docs/maintenance/CLEANUP.json cleanup-evidence/
+          fi
       - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: geomath-digital-cleanup-verification
-          path: |
-            cleanup-verification.log
-            ../digital-cleanup-source/digital/docs/maintenance/CLEANUP.json
+          path: cleanup-evidence/
           if-no-files-found: ignore
   retire:
     if: contains(github.event.head_commit.message, '[retire cleanup]')
