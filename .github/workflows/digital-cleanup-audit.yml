@@ -1,0 +1,39 @@
+name: Audit Digital cleanup
+on:
+  push:
+    branches: [chore/digital-cleanup]
+    paths: ['.github/workflows/digital-cleanup-audit.yml','tools/maintenance/cleanup-audit.py']
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: digital/package-lock.json
+      - name: Audit exact baseline in an isolated worktree
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git worktree add ../digital-cleanup-audit -b cleanup/audit-20261106 6313d2281b7bf621ca380c3beb78bbc94bef63f6
+          cd ../digital-cleanup-audit
+          python3 "$GITHUB_WORKSPACE/tools/maintenance/cleanup-audit.py"
+          cd digital
+          npm ci
+          npm test
+          cd ..
+          git config user.name 'GeoMath maintenance'
+          git config user.email '121752339+unDead41@users.noreply.github.com'
+          git add cleanup-audit.json
+          git commit -m 'Record Digital cleanup dependency audit'
+          auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $auth" push https://github.com/unDead41/geoMathDigital.git HEAD:refs/heads/cleanup/audit-20261106
