@@ -1,0 +1,66 @@
+name: Consolidate GeoMath Digital
+on:
+  push:
+    branches: [chore/digital-cleanup]
+    paths:
+      - '.github/workflows/digital-cleanup.yml'
+      - 'tools/maintenance/digital-cleanup.py'
+      - 'tools/maintenance/branch-snapshot.json'
+      - 'tools/maintenance/cleanup-payload/**'
+      - 'tools/maintenance/retire-trigger.json'
+permissions:
+  contents: write
+concurrency:
+  group: geomath-digital-cleanup
+  cancel-in-progress: false
+jobs:
+  prepare:
+    if: contains(github.event.head_commit.message, '[run cleanup]')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: digital/package-lock.json
+      - name: Consolidate and clean an isolated source worktree
+        run: python3 tools/maintenance/digital-cleanup.py prepare
+      - name: Verify build, portal, modules and original asset bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd ../digital-cleanup-source/digital
+          npm ci
+          npm run verify 2>&1 | tee "$GITHUB_WORKSPACE/cleanup-verification.log"
+          cd ..
+          python3 tools/check_repository_scope.py
+      - name: Archive original heads and publish checked candidate
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 tools/maintenance/digital-cleanup.py publish
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: geomath-digital-cleanup-verification
+          path: |
+            cleanup-verification.log
+            ../digital-cleanup-source/digital/docs/maintenance/CLEANUP.json
+          if-no-files-found: ignore
+  retire:
+    if: contains(github.event.head_commit.message, '[retire cleanup]')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify main and archive before retiring branches
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 tools/maintenance/digital-cleanup.py retire

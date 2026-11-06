@@ -1,0 +1,142 @@
+[
+  {
+    "name": "digitalize/security-activeSession",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-classroom-crud",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-core-backend",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-core-backend-scaling",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-core-portal",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-game-duel",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-game-duel-ui-refresh",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-game-language",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-module-content",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-module-design",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-module-explore-ui-refresh",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-module-guided",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-module-labs-ui-refresh",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-module-pelan-pengiraan",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-module-studio-ui-refresh",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-release-legacy",
+    "sha": "d33e10c7c565aee08f503a028dbe597fbddf744c"
+  },
+  {
+    "name": "digitalized-utility-auth-email",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-utility-auth-providers",
+    "sha": "05f3622c4f334e1e12a913cca3dfc96db6bc5bd2"
+  },
+  {
+    "name": "digitalized-utility-help-support",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-utility-offline-sync",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-utility-preferences",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-utility-profile",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-utility-save-resume",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-utility-security",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-ux-design-system",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-ux-mockup-completion",
+    "sha": "45d225ec540fbe4f99dca2f3623b5fee786130ab"
+  },
+  {
+    "name": "digitalized-ux-motion-audio",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-ux-ui-upgrade",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "digitalized-ux-usability",
+    "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+  },
+  {
+    "name": "main",
+    "sha": "6313d2281b7bf621ca380c3beb78bbc94bef63f6"
+  },
+  {
+    "name": "main-digital",
+    "sha": "8cce135102618ffad2c1de46063fcb5042ba0907"
+  },
+  {
+    "name": "main-digitalized",
+    "sha": "287155b5414a38e57d722446616228569b1ede68"
+  },
+  {
+    "name": "migration/verified-20261106",
+    "sha": "8655dd17ffa693cd1e2df52c791c136fa6adeb2e"
+  },
+  {
+    "name": "source/main-digitalized",
+    "sha": "05f3622c4f334e1e12a913cca3dfc96db6bc5bd2"
+  },
+  {
+    "name": "ui/ux-redesign-concept",
+    "sha": "4074dffc29cbd5a0922049c2ebb056ca3c293b31"
+  }
+]
