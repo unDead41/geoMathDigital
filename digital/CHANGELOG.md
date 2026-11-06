@@ -1,5 +1,25 @@
 # GeoDecoder Digital changelog
 
+## v2.10.0 — 4 November 2026
+
+- Terbitkan log masuk Google pada UI akaun v2.9.1, menggunakan sesi Supabase sedia ada dan callback HTTPS canonical.
+- Akaun Google baharu melengkapkan profil sendiri; retry tidak mengubah peranan sedia ada.
+- Buang pilihan, borang, controller dan permintaan OTP SMS. Provider telefon kekal tidak aktif.
+- Akaun Google memaparkan panduan keselamatan Google serta kawalan sesi; log masuk e-mel/nama pengguna, pemulihan dan permainan dikekalkan.
+- Gunakan migration profil yang telah dipasang; tiada perubahan credentials atau migration hosted baharu.
+
+## v2.9.1 — 4 November 2026 (calon semakan mockup)
+
+- Lengkapkan susun atur Home, mod, panduan, permainan, Duel, akaun, kelas,
+  modul, tetapan dan bantuan berdasarkan 40 paparan konsep yang diluluskan.
+- Gunakan ilustrasi bongkah sedia ada, hierarki navy, rel akaun dan panel
+  tetapan bersama; semua borang/tindakan masih mengikut controller sebenar.
+- Nota modul v1.6.2 menggunakan kandungan ringkas, model dan bentangan sebenar
+  serta pendedahan lanjut untuk nota penuh. Studio mengekalkan matematik asal.
+- Betulkan panduan kepada demo terhingga 4.8 saat dan kawalan Tab/Enter/Space.
+- Kekalkan offline/outbox, CRUD, sesi, peraturan permainan dan protokol Duel2.
+  Ini branch semakan; tiada perubahan backend atau penerbitan Pages.
+
 ## v2.9.0 — 4 November 2026 (integrasi sumber main-digitalized)
 
 - Menyatukan UI utama dengan aset 3D, UI Duel dan tiga kemasan modul v1.6.1.

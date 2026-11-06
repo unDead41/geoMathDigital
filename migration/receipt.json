@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "platform": "digital",
+  "date": "2026-11-06",
+  "source_repository": "unDead41/geoMathPhysical",
+  "destination_repository": "unDead41/geoMathDigital",
+  "source_branches": [
+    {
+      "name": "digitalize/security-activeSession",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalize/security-activeSession"
+    },
+    {
+      "name": "digitalized-classroom-crud",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-classroom-crud"
+    },
+    {
+      "name": "digitalized-core-backend",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-core-backend"
+    },
+    {
+      "name": "digitalized-core-backend-scaling",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-core-backend-scaling"
+    },
+    {
+      "name": "digitalized-core-portal",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-core-portal"
+    },
+    {
+      "name": "digitalized-game-duel",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-game-duel"
+    },
+    {
+      "name": "digitalized-game-duel-ui-refresh",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-game-duel-ui-refresh"
+    },
+    {
+      "name": "digitalized-game-language",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-game-language"
+    },
+    {
+      "name": "digitalized-module-content",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-module-content"
+    },
+    {
+      "name": "digitalized-module-design",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-module-design"
+    },
+    {
+      "name": "digitalized-module-explore-ui-refresh",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-module-explore-ui-refresh"
+    },
+    {
+      "name": "digitalized-module-guided",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-module-guided"
+    },
+    {
+      "name": "digitalized-module-labs-ui-refresh",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-module-labs-ui-refresh"
+    },
+    {
+      "name": "digitalized-module-pelan-pengiraan",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-module-pelan-pengiraan"
+    },
+    {
+      "name": "digitalized-module-studio-ui-refresh",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-module-studio-ui-refresh"
+    },
+    {
+      "name": "digitalized-release-legacy",
+      "sha": "71db77c0206de664e50fa57ff57e1825af13f938",
+      "filtered_sha": "d33e10c7c565aee08f503a028dbe597fbddf744c",
+      "destination_branch": "digitalized-release-legacy"
+    },
+    {
+      "name": "digitalized-utility-auth-email",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-utility-auth-email"
+    },
+    {
+      "name": "digitalized-utility-auth-providers",
+      "sha": "752ce908d16d13acc9cc7510797e8363d182c3f5",
+      "filtered_sha": "05f3622c4f334e1e12a913cca3dfc96db6bc5bd2",
+      "destination_branch": "digitalized-utility-auth-providers"
+    },
+    {
+      "name": "digitalized-utility-help-support",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-utility-help-support"
+    },
+    {
+      "name": "digitalized-utility-offline-sync",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-utility-offline-sync"
+    },
+    {
+      "name": "digitalized-utility-preferences",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-utility-preferences"
+    },
+    {
+      "name": "digitalized-utility-profile",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-utility-profile"
+    },
+    {
+      "name": "digitalized-utility-save-resume",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-utility-save-resume"
+    },
+    {
+      "name": "digitalized-utility-security",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-utility-security"
+    },
+    {
+      "name": "digitalized-ux-design-system",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-ux-design-system"
+    },
+    {
+      "name": "digitalized-ux-mockup-completion",
+      "sha": "37bc2cd262cc0a54e8ee31339ea37471c1ecfda5",
+      "filtered_sha": "45d225ec540fbe4f99dca2f3623b5fee786130ab",
+      "destination_branch": "digitalized-ux-mockup-completion"
+    },
+    {
+      "name": "digitalized-ux-motion-audio",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-ux-motion-audio"
+    },
+    {
+      "name": "digitalized-ux-ui-upgrade",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-ux-ui-upgrade"
+    },
+    {
+      "name": "digitalized-ux-usability",
+      "sha": "ef697c86a5bfdf5a5658c3df92bce1d7f3f88652",
+      "filtered_sha": "efffa95e77ed9b8e310079b91c227a7468134a09",
+      "destination_branch": "digitalized-ux-usability"
+    },
+    {
+      "name": "main-digitalized",
+      "sha": "752ce908d16d13acc9cc7510797e8363d182c3f5",
+      "filtered_sha": "05f3622c4f334e1e12a913cca3dfc96db6bc5bd2",
+      "destination_branch": "source/main-digitalized"
+    },
+    {
+      "name": "ui/ux-redesign-concept",
+      "sha": "4d83561667cf74fbe5cd6144ce5e3e7f660a75cd",
+      "filtered_sha": "4074dffc29cbd5a0922049c2ebb056ca3c293b31",
+      "destination_branch": "ui/ux-redesign-concept"
+    }
+  ],
+  "assembled_parent": "05f3622c4f334e1e12a913cca3dfc96db6bc5bd2",
+  "destination_parent": "1f972503311377b1b2a7c20f523a303a1936c980",
+  "verification": "All platform checks in separate-geomath.yml passed before publication.",
+  "published": true,
+  "checks": [
+    "scope",
+    "npm-ci",
+    "npm-test",
+    "standalone-build",
+    "publication-prepare",
+    "static-check"
+  ]
+}
