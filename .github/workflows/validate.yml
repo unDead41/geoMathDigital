@@ -1,7 +1,7 @@
 name: GeoMath Digital checks
 on:
   push:
-    branches: [main, 'digitalized-*', 'feature/**', 'fix/**']
+    branches: [main, 'feature/**', 'fix/**', 'chore/**']
   pull_request:
 permissions:
   contents: read
@@ -20,11 +20,20 @@ jobs:
           cache: npm
           cache-dependency-path: digital/package-lock.json
       - run: python3 tools/check_repository_scope.py
-      - name: Portal tests and independent build
+      - name: Rebuild and verify portal, learning modules and original media
         working-directory: digital
         run: |
           npm ci
-          npm test
-          npm run build
-          npm run prepare:pages
-          npm run check
+          npm run verify
+      - name: Check source stays clean after build
+        run: |
+          python3 tools/check_repository_scope.py
+          git diff --exit-code
+      - uses: actions/upload-artifact@v7
+        with:
+          name: GeoMathDigital-build
+          path: |
+            digital/artifacts/GeoDecoder_Digital_V2.html
+            digital/artifacts/pwa/
+          if-no-files-found: error
+          retention-days: 14
