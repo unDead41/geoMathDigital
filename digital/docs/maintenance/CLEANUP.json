@@ -2,7 +2,7 @@
   "schema_version": 1,
   "base": "6313d2281b7bf621ca380c3beb78bbc94bef63f6",
   "version": "2.10.1",
-  "status": "verified",
+  "status": "completed",
   "pages": {
     "branch": "main-digitalized",
     "sha": "287155b5414a38e57d722446616228569b1ede68",
@@ -518,5 +518,30 @@
   "clean_source": {
     "files_before_report_refresh": 1137,
     "bytes_before_report_refresh": 93285737
+  },
+  "completion": {
+    "date": "2026-11-06",
+    "verified_source_commit": "7143ee89aaf08b04bf202f249b6d6873b4a32e69",
+    "verification_run": "https://github.com/unDead41/geoMathDigital/actions/runs/42208690114",
+    "retirement_run": "https://github.com/unDead41/geoMathDigital/actions/runs/42209216607",
+    "retired_original_branches": 33,
+    "retired_temporary_branches": 3,
+    "remaining_branches": [
+      {
+        "name": "main",
+        "sha": "7143ee89aaf08b04bf202f249b6d6873b4a32e69"
+      },
+      {
+        "name": "main-digitalized",
+        "sha": "287155b5414a38e57d722446616228569b1ede68"
+      }
+    ],
+    "preparation_archive_tag": "archive/digital-cleanup-preparation-20261106",
+    "preparation_archive_commit": "9338ef3b2e0b52236b3090446490799e9273cde3",
+    "verified_source_snapshot": {
+      "files": 1136,
+      "bytes": 93284945,
+      "measurement": "Sum of tracked blob bytes at verified_source_commit; excludes Git history and generated build output."
+    }
   }
 }
