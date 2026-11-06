@@ -1,0 +1,262 @@
+{
+  "base": "6313d2281b7bf621ca380c3beb78bbc94bef63f6",
+  "references": {
+    "dist/assets/audio/": [
+      {
+        "path": "digital/tests/offline-package.test.mjs",
+        "line": 15,
+        "text": "  fs.mkdirSync(path.join(root,'dist/assets/audio'),{recursive:true});fs.writeFileSync(path.join(root,'dist/assets/audio/menu.mp3'),'menu');fs.writeFileSync(path.join(root,'dist/assets/audio/map.mp3'),'map');"
+      },
+      {
+        "path": "digital/tools/offline-package.mjs",
+        "line": 14,
+        "text": " const audio=['menu','map'].map(name=>fs.readFileSync(path.join(root,`dist/assets/audio/${name}.mp3`)));"
+      },
+      {
+        "path": "digital/tools/standalone.mjs",
+        "line": 29,
+        "text": "  const embedded=JSON.stringify('data:audio/mpeg;base64,'+fs.readFileSync(path.join(root,`dist/assets/audio/${name}.mp3`)).toString('base64'));"
+      }
+    ],
+    "pwa/icon.svg": [],
+    "module-v1.5.0.html": [],
+    "module-v1.6.0.html": [],
+    "module-v1.6.1.html": [
+      {
+        "path": "digital/vendor/module-release.json",
+        "line": 11,
+        "text": "  \"previousRelease\": \"module-v1.6.1.html\","
+      }
+    ],
+    "GeoDecoder_Digital_V1.html": [
+      {
+        "path": "digital/README.md",
+        "line": 86,
+        "text": "Muat turun `GeoDecoder_Digital_V2.html` dan buka dengan Chrome atau Edge terkini. Semua kod, CSS, soalan dan ilustrasi telah dibundel. **Akaun dan room memerlukan Internet**; latihan sendiri boleh dimainkan tanpa Internet. `GeoDecoder_Digital_V1.html` dikekalkan sebagai nama fail serasi dan mengandungi keluaran V2 yang sama."
+      },
+      {
+        "path": "digital/tools/check.mjs",
+        "line": 35,
+        "text": "const standalone=read('artifacts/GeoDecoder_Digital_V1.html');"
+      },
+      {
+        "path": "digital/tools/check.mjs",
+        "line": 40,
+        "text": "assert.equal(standalone,read('dist/GeoDecoder_Digital_V1.html'));"
+      },
+      {
+        "path": "digital/tools/check.mjs",
+        "line": 41,
+        "text": "for(const alias of ['GeoDecoder_Digital_V1.html','GeoDecoder_Digital_V2.html','dist/GeoDecoder_Digital_V2.html'])assert.equal(standalone,read(alias),'Standalone alias mismatch: '+alias);"
+      },
+      {
+        "path": "digital/tools/prepare-publication.mjs",
+        "line": 8,
+        "text": "const aliases=['GeoDecoder_Digital_V1.html','GeoDecoder_Digital_V2.html','dist/GeoDecoder_Digital_V1.html','dist/GeoDecoder_Digital_V2.html'];"
+      },
+      {
+        "path": "digital/tools/standalone.mjs",
+        "line": 35,
+        "text": "for(const target of ['GeoDecoder_Digital_V1.html','GeoDecoder_Digital_V2.html','artifacts/GeoDecoder_Digital_V1.html','dist/GeoDecoder_Digital_V1.html','dist/GeoDecoder_Digital_V2.html']){"
+      }
+    ],
+    "GeoDecoder_Digital_V2.html": [
+      {
+        "path": "digital/README.md",
+        "line": 86,
+        "text": "Muat turun `GeoDecoder_Digital_V2.html` dan buka dengan Chrome atau Edge terkini. Semua kod, CSS, soalan dan ilustrasi telah dibundel. **Akaun dan room memerlukan Internet**; latihan sendiri boleh dimainkan tanpa Internet. `GeoDecoder_Digital_V1.html` dikekalkan sebagai nama fail serasi dan mengandungi keluaran V2 yang sama."
+      },
+      {
+        "path": "digital/tests/design-system.browser.mjs",
+        "line": 58,
+        "text": " await run('Downloaded HTML offline uses same controls',{width:320,height:900},async(page,context)=>{await context.setOffline(true);await page.goto(pathToFileURL(path.join(root,'artifacts/GeoDecoder_Digital_V2.html')).href);await settings(page,{theme:'dark'});await page.locator('#guest-button').focus();await page.keyboard.press('Tab');await page.keyboard.press('Shift+Tab');assert.equal(await page.locator('#guest-button').evaluate(n=>n===document.activeElement&&n.matches(':focus-visible')),true,'"
+      },
+      {
+        "path": "digital/tests/ease-browser-helpers.mjs",
+        "line": 60,
+        "text": "    await page.goto(offline?pathToFileURL(path.join(root,'artifacts/GeoDecoder_Digital_V2.html')).href:harness.origin);"
+      },
+      {
+        "path": "digital/tools/check.mjs",
+        "line": 41,
+        "text": "for(const alias of ['GeoDecoder_Digital_V1.html','GeoDecoder_Digital_V2.html','dist/GeoDecoder_Digital_V2.html'])assert.equal(standalone,read(alias),'Standalone alias mismatch: '+alias);"
+      },
+      {
+        "path": "digital/tools/prepare-publication.mjs",
+        "line": 7,
+        "text": "const canonical=fs.readFileSync(path.join(root,'artifacts/GeoDecoder_Digital_V2.html'));"
+      },
+      {
+        "path": "digital/tools/prepare-publication.mjs",
+        "line": 8,
+        "text": "const aliases=['GeoDecoder_Digital_V1.html','GeoDecoder_Digital_V2.html','dist/GeoDecoder_Digital_V1.html','dist/GeoDecoder_Digital_V2.html'];"
+      },
+      {
+        "path": "digital/tools/standalone.mjs",
+        "line": 33,
+        "text": "const canonical=path.join(root,'artifacts/GeoDecoder_Digital_V2.html');"
+      },
+      {
+        "path": "digital/tools/standalone.mjs",
+        "line": 35,
+        "text": "for(const target of ['GeoDecoder_Digital_V1.html','GeoDecoder_Digital_V2.html','artifacts/GeoDecoder_Digital_V1.html','dist/GeoDecoder_Digital_V1.html','dist/GeoDecoder_Digital_V2.html']){"
+      },
+      {
+        "path": "digital/tools/verify-preferences.cjs",
+        "line": 12,
+        "text": "const offline=await b.newPage();const requests=[];offline.on('request',r=>requests.push(r.url()));await offline.goto('http://127.0.0.1:8768/dist/GeoDecoder_Digital_V2.html');await offline.context().setOffline(true);await offline.locator('#preferences-button').click();await offline.locator('[data-pref=contrast]').selectOption('strong');await offline.keyboard.press('Escape');await offline.locator('#module-button').click();await offline.frameLocator('#module-frame').locator('#labels').check();asser"
+      },
+      {
+        "path": "docs/DIGITAL_PUBLISHING.md",
+        "line": 61,
+        "text": "| `digital/artifacts/GeoDecoder_Digital_V2.html` | Fail offline canonical; root `index.html` private dan semua alias HTML mesti byte-identik dengannya | 6,654,237 bait; SHA256 `aef9b6e51c7b02fb80aa0a10a9ef154e3b81edffadda5bbe634c4bb9d437ea34` |"
+      }
+    ],
+    "GeoDecoder_Modul_V1.html": [
+      {
+        "path": "digital/module/README.md",
+        "line": 68,
+        "text": "Muat turun **GeoDecoder_Modul_V1.html**, kemudian buka dengan Chrome atau Edge."
+      },
+      {
+        "path": "digital/module/tests/app-fixture.mjs",
+        "line": 23,
+        "text": " const html=fs.readFileSync(new URL('../GeoDecoder_Modul_V1.html',import.meta.url),'utf8'),code=html.match(/<script>([\\s\\S]*?)<\\/script>/)[1],nodes={},duplicateIds=[];"
+      },
+      {
+        "path": "digital/module/tests/learning-tools-integration.test.mjs",
+        "line": 7,
+        "text": " const html=fs.readFileSync(new URL('../GeoDecoder_Modul_V1.html',import.meta.url),'utf8');"
+      },
+      {
+        "path": "digital/module/tools/build.mjs",
+        "line": 14,
+        "text": "const out=path.join(root,'GeoDecoder_Modul_V1.html');"
+      },
+      {
+        "path": "digital/module/tools/check.mjs",
+        "line": 3,
+        "text": "const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),html=fs.readFileSync(path.join(root,'GeoDecoder_Modul_V1.html'),'utf8');"
+      },
+      {
+        "path": "digital/module/tools/explore-ui-qa.mjs",
+        "line": 14,
+        "text": "const html=fs.readFileSync(path.join(root,'GeoDecoder_Modul_V1.html'),'utf8');"
+      },
+      {
+        "path": "digital/module/tools/labs-ui-qa.html",
+        "line": 24,
+        "text": "const html=await(await fetch('../GeoDecoder_Modul_V1.html')).text();"
+      },
+      {
+        "path": "digital/module/tools/learning-tools-qa.html",
+        "line": 46,
+        "text": "try{const html=await(await fetch('../GeoDecoder_Modul_V1.html')).text();qaFrame.srcdoc=prepareModuleFrame(html,{instanceId:qaInstance,settings:qaSettings()});qaOut.textContent='Sedia. Pilih bahagian dan lebar, kemudian Semak paparan.';}catch(error){qaOut.textContent=error.message;}"
+      },
+      {
+        "path": "digital/module/tools/qa-server.mjs",
+        "line": 13,
+        "text": " const url=req.url.split('?')[0],file=path.resolve(root,url==='/'?'GeoDecoder_Modul_V1.html':url==='/qa.html'?'tools/qa.html':'.'+url);"
+      },
+      {
+        "path": "digital/module/tools/qa.html",
+        "line": 6,
+        "text": "<iframe id=\"preview\" src=\"../GeoDecoder_Modul_V1.html\" title=\"Modul GeoDecoder untuk pengesahan\"></iframe><h2>Keputusan semakan DOM</h2><pre id=\"qa-result\" role=\"status\">Pilih saiz dan bahagian, kemudian Semak paparan.</pre>"
+      },
+      {
+        "path": "digital/module/tools/qa.html",
+        "line": 11,
+        "text": " const html=await(await fetch('../GeoDecoder_Modul_V1.html')).text();"
+      },
+      {
+        "path": "digital/module/tools/studio-ui-refresh.browser.mjs",
+        "line": 27,
+        "text": " screenshotDocument=prepareModuleFrame(fs.readFileSync(path.join(digital,'module/GeoDecoder_Modul_V1.html'),'utf8'),{instanceId:'screenshot-only',settings});"
+      },
+      {
+        "path": "digital/vendor/module-release.json",
+        "line": 7,
+        "text": "  \"sourcePath\": \"digital/module/GeoDecoder_Modul_V1.html\","
+      }
+    ],
+    "GeoDecoder_Design_System.html": [
+      {
+        "path": "digital/README.md",
+        "line": 274,
+        "text": "`npm run build`, kemudian buka `artifacts/GeoDecoder_Design_System.html` untuk"
+      },
+      {
+        "path": "digital/tools/check.mjs",
+        "line": 49,
+        "text": "assert.equal(read('artifacts/GeoDecoder_Design_System.html'),read('docs/design-system-evidence/GeoDecoder_Design_System.html'),'Design reference review artifact is stale');"
+      },
+      {
+        "path": "digital/tools/design-reference.mjs",
+        "line": 20,
+        "text": "  const destination=path.join(root,'artifacts/GeoDecoder_Design_System.html');"
+      },
+      {
+        "path": "digital/tools/design-reference.mjs",
+        "line": 22,
+        "text": "  const review=path.join(root,'docs/design-system-evidence/GeoDecoder_Design_System.html');fs.mkdirSync(path.dirname(review),{recursive:true});fs.writeFileSync(review,html);"
+      }
+    ],
+    "app.bundle.js": [
+      {
+        "path": "digital/README.md",
+        "line": 209,
+        "text": "`package-lock.json`. `dist/index.html` menggunakan `dist/app.bundle.js`."
+      },
+      {
+        "path": "digital/dist/index.html",
+        "line": 280,
+        "text": "  <script type=\"module\" src=\"./app.bundle.js\"></script>"
+      },
+      {
+        "path": "digital/tests/duel-v2-fixture.mjs",
+        "line": 29,
+        "text": "      if(req.url==='/app.bundle.js'){res.writeHead(200,{'Content-Type':'text/javascript'});res.end(bundle);return;}"
+      },
+      {
+        "path": "digital/tests/mockup-review.README.md",
+        "line": 5,
+        "text": "The fixture compiles the real app and current module sources in memory. It does not overwrite `app.bundle.js`, module/vendor output, or product source. The only controller hooks are appended in that in-memory QA bundle. The parent module bridge and sandboxed iframe remain real. A disposable PGlite database runs the real classroom SQL gateway; a second runs the real protocol 2 Duel handler and SQL. Auth sessions, session-list transport, reflection records and classroom display records are synthet"
+      },
+      {
+        "path": "digital/tests/mockup-review.capture.mjs",
+        "line": 37,
+        "text": "  catch(error){await page.screenshot({path:path.join(out,'fixture-start-FAILED.png'),fullPage:true}).catch(()=>{});fs.writeFileSync(path.join(out,'fixture-start-FAILED.bundle.js'),await page.evaluate(()=>fetch('/app.bundle.js').then(r=>r.text())));throw Error('App initialization did not reach the QA hook: '+(errors.join('; ')||error.message));}"
+      },
+      {
+        "path": "digital/tests/mockup-review.fixture.mjs",
+        "line": 152,
+        "text": "      if(url.pathname==='/app.bundle.js'){res.writeHead(200,{'Content-Type':'text/javascript'}).end(bundle);return;}"
+      },
+      {
+        "path": "digital/tests/mockup-review.fixture.mjs",
+        "line": 172,
+        "text": "  const moduleBytes=Buffer.from(html),builtBundle=path.join(root,'dist/app.bundle.js');"
+      },
+      {
+        "path": "digital/tests/module-settings-qa.browser.mjs",
+        "line": 7,
+        "text": "const report={startedAt:new Date().toISOString(),browser:'Headless Chromium /tmp/chromium via Playwright',bundleSha256:createHash('sha256').update(fs.readFileSync(path.join(root,'dist/app.bundle.js'))).digest('hex'),cases:[],screenshots:[],layoutChecks:0,limitations:['Chromium desktop and touch viewport emulation; physical phones/Safari/Firefox not certified.','Classroom and Duel backend are unchanged; no new live account, email or Duel match was created in this display-only check.']};"
+      },
+      {
+        "path": "digital/tests/offline.browser.mjs",
+        "line": 21,
+        "text": "const fixture=fs.readFileSync(path.join(root,'dist/index.html'),'utf8').replace('<script type=\"module\" src=\"./app.bundle.js\"></script>',()=>'<script>'+javascript.replace('var cloud = new ClassroomCloud();','var cloud = new ClassroomCloud(); window.__offlineCloudFixture = cloud;').replace('offline.attachModule(moduleProgress);','offline.attachModule(moduleProgress); window.__offlineProgressFixture = moduleProgress;')+'</script>');"
+      },
+      {
+        "path": "digital/tools/standalone.mjs",
+        "line": 15,
+        "text": "fs.writeFileSync(path.join(root,'dist/app.bundle.js'),javascript);"
+      },
+      {
+        "path": "digital/tools/standalone.mjs",
+        "line": 18,
+        "text": "  return template.replace('<link rel=\"stylesheet\" href=\"./style.css\">',()=>`<style>\\n${css}\\n</style>`).replace('<link rel=\"stylesheet\" href=\"./design-tokens.css\">','').replace('<link rel=\"stylesheet\" href=\"./foundation.css\">','').replace('<link rel=\"stylesheet\" href=\"./portal.css\">','').replace('<link rel=\"stylesheet\" href=\"./usability.css\">','').replace('<link rel=\"stylesheet\" href=\"./help-support.css\">','').replace('<link rel=\"stylesheet\" href=\"./entry.css\">','').replace('<script type=\"module"
+      }
+    ]
+  }
+}
