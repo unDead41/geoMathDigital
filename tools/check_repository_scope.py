@@ -1,31 +1,29 @@
 #!/usr/bin/env python3
-"""Reject accidental cross-platform source files in a GeoMath checkout."""
+"""Keep Digital source independent and prevent regenerated output being tracked."""
 from pathlib import Path
 import subprocess
 import sys
 
 root = Path(__file__).resolve().parents[1]
-platform = (root / '.geomath-platform').read_text().strip()
-files = subprocess.check_output(['git', 'ls-files', '-z'], cwd=root).decode().split('\0')
-common = ('main/', 'src/', 'print_labels/', 'tutorial/', 'platformio.ini',
-          'platformio.local.ini.example', 'SAMBUNGAN.md', 'COMMANDS.md')
-if platform == 'app':
-    banned = (*common, 'digital/', 'supabase/')
-    required = ('apps/geomath_flutter/pubspec.yaml',
-                'apps/geomath_flutter/lib/features/ai_battle/domain/ai_policy.dart')
-elif platform == 'digital':
-    banned = (*common, 'apps/')
-    required = ('digital/package.json', 'supabase/config.toml')
-elif platform == 'physical':
-    banned = ('apps/', 'digital/', 'supabase/', 'index.html', 'APP.md',
-              'docs/geomath-app/', 'docs/geomath-app-prompts/')
-    required = ('platformio.ini', 'main/firmware_version.h')
-else:
-    raise SystemExit('Unknown GeoMath platform: ' + platform)
-bad = [p for p in files if p and any(p == x or p.startswith(x) for x in banned)]
+if (root / '.geomath-platform').read_text().strip() != 'digital':
+    raise SystemExit('This checkout must identify the Digital platform.')
+tracked = subprocess.check_output(['git', 'ls-files', '-z'], cwd=root).decode().split('\0')
+banned = ('main/', 'src/', 'apps/', 'print_labels/', 'tutorial/',
+          'platformio.ini', 'platformio.local.ini.example', 'SAMBUNGAN.md',
+          'COMMANDS.md', 'migration/', 'index.html', '.nojekyll',
+          'digital/artifacts/', 'digital/GeoDecoder_Digital_V',
+          'digital/dist/GeoDecoder_Digital_V', 'digital/dist/app.bundle.js',
+          'digital/dist/assets/', 'digital/module/GeoDecoder_Modul_V1.html',
+          'digital/vendor/module-v1.5.0.html', 'digital/vendor/module-v1.6.0.html',
+          'digital/vendor/module-v1.6.1.html',
+          'digital/docs/design-system-evidence/GeoDecoder_Design_System.html')
+bad = [p for p in tracked if p and any(p == value or p.startswith(value) for value in banned)]
+required = ('digital/package.json', 'supabase/config.toml',
+            'digital/assets/manifest.json', 'digital/assets/audio/menu.mp3',
+            'digital/assets/audio/map.mp3', 'digital/assets/icons/icon.svg')
 missing = [p for p in required if not (root / p).is_file()]
 if bad or missing:
-    print('Cross-platform files:', bad)
-    print('Missing required source:', missing)
+    print('Unexpected platform/generated files:', bad)
+    print('Missing source:', missing)
     sys.exit(1)
-print(f'PASS: {platform} source ownership ({len([p for p in files if p])} tracked files).')
+print(f'PASS: Digital source ownership and generated-file boundaries ({sum(bool(x) for x in tracked)} tracked files).')

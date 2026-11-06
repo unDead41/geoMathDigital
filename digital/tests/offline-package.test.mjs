@@ -12,7 +12,7 @@ test('changing any cached asset or worker policy invalidates the offline package
 test('offline builder emits a complete deployable subdirectory and a scoped install manifest',()=>{
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'geomath-offline-build-'));
  try{
-  fs.mkdirSync(path.join(root,'dist/assets/audio'),{recursive:true});fs.writeFileSync(path.join(root,'dist/assets/audio/menu.mp3'),'menu');fs.writeFileSync(path.join(root,'dist/assets/audio/map.mp3'),'map');
+  fs.mkdirSync(path.join(root,'assets/audio'),{recursive:true});fs.writeFileSync(path.join(root,'assets/audio/menu.mp3'),'menu');fs.writeFileSync(path.join(root,'assets/audio/map.mp3'),'map');
   const result=buildOfflinePackage({root,html:'<!doctype html><html><head><title>GeoMath</title></head><body>Learning</body></html>'});
   const directory=path.join(root,'artifacts/pwa');
   assert.equal(fs.readFileSync(path.join(directory,'index.html'),'utf8'),result.html);

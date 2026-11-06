@@ -1,281 +1,41 @@
-# GeoDecoder Digital V2
+# GeoMath Digital — pembangunan
 
-Versi Digital: **v2.10.0**. Integrasi: **main-digitalized**.
+Sumber semasa: `unDead41/geoMathDigital`, branch `main`. Mulakan daripada
+[README repository](../README.md) dan `AGENTS.md`.
 
-Log masuk Google tersedia melalui **Teruskan dengan Google** pada Log masuk dan Daftar akaun. Akaun Google baharu melengkapkan nama pengguna, nama paparan dan peranan. Pilihan telefon/OTP SMS telah dikeluarkan atas permintaan pengguna; e-mel/nama pengguna dan kata laluan dikekalkan. Lihat [Google Auth](docs/AUTH_PROVIDERS.md).
+Portal mengandungi kuiz 10 soalan, latihan 15 soalan, pasangan bongkah R1 dan
+bentangan R2, Duel protocol 2, akaun e-mel/Google, kelas guru/pelajar, profil,
+11 model pembelajaran, makmal dan studio. PWA menyediakan cache offline serta
+outbox rekod yang dihantar apabila sambungan kembali. Kelas, akaun dan Duel
+menggunakan backend online.
 
-Laman aktif: https://undead41.github.io/geodecoder-digital/ . Rujuk `release.json` pada repository penerbitan untuk versi, SHA sumber dan hash artifak semasa. [Handoff Google v2.10.0](docs/google-auth-release/HANDOFF.md) merekodkan integrasi dan skop ujian.
-Modul pembelajaran: **v1.6.2**. Firmware berada pada branch berasingan; `main` yang dibaca semasa integrasi ialah **v2.0.2**. Integrasi sumber v2.9.0 menyatukan UI utama/Duel/modul, offline, CRUD dan transport. Status sumber dan had rollout berada dalam [rekod integrasi](docs/integration-sync/README.md). Rekod penerbitan awam terdahulu v2.8.0 kekal dalam [RELEASE_V2_8.md](docs/RELEASE_V2_8.md).
-
-> Rekod deployment v2.7.0: backend diaktifkan selepas kebenaran jelas melalui migration `20261026110959` dan Duel Edge v2/protocol2. Commit penerbitan awam `0486388a9c94942ab0973af5609be0168d27323c`. Lihat [RELEASE_V2_7.md](docs/RELEASE_V2_7.md). Ini rekod sejarah sebelum keluaran v2.8.0.
-
-Keluaran v2.8.0 mengekalkan semua fungsi v2.7.0 dan menambah satu design system pusat, tutorial/bantuan bergambar serta Studio Pelan & Dongakan dan Semakan Langkah Pengiraan modul v1.6.0. Penggabungan kod tidak membuktikan penerbitan Pages atau deployment backend baharu.
-
-Profil mempunyai pratonton draf dan pengesahan perubahan belum disimpan; lihat [kemas kini profil](docs/PROFILE_V2_7.md).
-Simpan & Sambung: Home → **Sambung permainan** memaparkan ringkasan sebelum memulihkan Kuiz10, Latihan15 atau latihan semula. Satu slot bagi tetamu/setiap akaun pada pelayar dan origin yang sama; bukan sync antara peranti. **Mula baharu** mengesahkan penggantian sesi belum selesai. Jika storan disekat/penuh, kekalkan halaman terbuka. Lihat [kontrak dan bukti](docs/SAVE_RESUME.md).
-Sejarah migration hosted dan semakan deployment boleh diaudit melalui [operasi backend](backend/operations/README.md); fail migration dalam Git bukan bukti deployment baharu.
-
-Integrasi ini merangkumi Duel protocol 2. Pengaktifan memerlukan backend/Edge yang sepadan; rekod branch Duel tidak mendakwa deployment production.
-Lihat [handoff integrasi](docs/DUEL_V2_HANDOFF.md) sebelum merge atau deploy.
-
-Senarai Sesi Aktif menggunakan rekod Auth sebenar melalui RPC baca sahaja.
-Pembatalan semua sesi lain mengekalkan peranti ini; pembatalan satu sesi pilihan
-belum disokong API rasmi. Lihat [seni bina, deployment dan batas ujian](docs/ACTIVE_SESSIONS.md).
-
-Keluaran ini menyatukan BM/English, rich text, kuiz/latihan/duel, kemudahan
-penggunaan, modul geometri diperluas, aktiviti berpandu, Profil Saya,
-Kata Laluan & Keselamatan serta Tetapan Penggunaan.
-
-Rujukan sejarah sumber, perubahan, syarat database dan bukti pengesahan v2.6.0:
-[RELEASE_V2_6.md](docs/RELEASE_V2_6.md).
-
-Pakej e-mel akaun: [Auth email v1.1.0](backend/email/README.md), pada branch
-`digitalized-utility-auth-email`. Lapan templat BM/English telah disediakan;
-dashboard masih memerlukan custom SMTP untuk mengaktifkan reka bentuk sendiri.
-Lihat [persediaan dan had penghantaran](docs/EMAIL_SETUP.md).
-
-Lihat [pelaksanaan 40 paparan mockup](docs/mockup-completion/README.md) untuk bukti visual dan had penerbitan.
-
-## Pusat Bantuan & Lapor Masalah
-
-Buka Pusat Bantuan melalui header, Tetapan atau butang bantuan modul. Panduan
-BM/English mengguna semula tutorial dan tetapan sedia ada. Laporan mempunyai
-pratonton, Salin, Pilih teks dan muat turun TXT; tiada penghantaran automatik.
-Jangan masukkan maklumat peribadi atau rahsia dalam penerangan. Draf kekal
-dalam memori tab sahaja. Lihat [audit dan kontrak backend](docs/HELP_SUPPORT_AUDIT.md)
-dan [serahan serta ujian](docs/HELP_SUPPORT_HANDOFF.md).
-
-Tutorial R1, R2 dan pasangan +1 kini menggunakan contoh kubus bergambar dengan
-klip setempat 4.8 saat, sekali main serta Jeda/Sambung/Main semula. Tujuh
-panduan mendahulukan visual; penerangan penuh dan panduan papan kekunci boleh
-dibuka. Pilihan Kurangkan animasi aplikasi atau peranti memberi ilustrasi
-statik berlabel. Demonstrasi tidak membaca jawapan semasa, mengubah permainan
-atau memuat video luar. Lihat [kemas kini bantuan visual](docs/HELP_VISUAL_UPDATE.md).
-
-## Laman GitHub Pages
-
-Main terus: **[GeoDecoder Digital](https://undead41.github.io/geodecoder-digital/)**.
-
-Pautan itu menggunakan repository penerbitan berasingan. Push ke
-`main-digitalized` tidak dengan sendiri mengemas kini repository laman awam.
-Fail `index.html` di akar branch ini dan setiap HTML muat turun dibina daripada
-satu artifak keluaran yang sama. Untuk calon v2.8.0, binaan dan semakan hash
-semua alias mesti diselesaikan pada sumber gabungan; ia belum menjadi resit
-penerbitan baharu.
-
-Rekod penerbitan v2.7.0 berada dalam [RELEASE_V2_7.md](docs/RELEASE_V2_7.md),
-dengan workflow [40313690820](https://github.com/unDead41/geodecoder-digital/actions/runs/40313690820)
-bagi commit awam `0486388a9c94942ab0973af5609be0168d27323c`.
-
-Rekod penerbitan v2.6.0 menggunakan repository public `unDead41/geodecoder-digital`,
-branch **main-digitalized**, folder **/(root)**. Tetapan Pages telah disimpan dan
-disahkan selepas reload. Commit awam
-`f5e5e13edd4c3627282cdaca78870c13399ac915` mempunyai workflow
-[40272514912](https://github.com/unDead41/geodecoder-digital/actions/runs/40272514912)
-yang berjaya; HTTP/hash ketika itu sepadan artifak v2.6.0 yang diuji. Sumber kod keluaran tersebut ialah `6246d06ab492a5b0ab3edb3d5ee7b25bcc84b081`.
-
-Repository asal ini kekal private. Fail laman mengandungi frontend sahaja;
-database/Auth/Realtime kekal pada Supabase. Migration hosted profile/progress v2.6.0
-telah dipasang dan disahkan dalam rekod terdahulu. Smoke test Chrome live v2.6.0 mengesahkan Practice15
-memberi **1/15** bagi pasangan piramid yang tepat, modul v1.5.0 serta penyelarasan
-English/saiz teks. Lihat [rekod Pages](docs/GITHUB_PAGES.md) untuk resit dan
-had pengesahan.
-
-## Cuba satu fail HTML
-
-Muat turun `GeoDecoder_Digital_V2.html` dan buka dengan Chrome atau Edge terkini. Semua kod, CSS, soalan dan ilustrasi telah dibundel. **Akaun dan room memerlukan Internet**; latihan sendiri boleh dimainkan tanpa Internet. `GeoDecoder_Digital_V1.html` dikekalkan sebagai nama fail serasi dan mengandungi keluaran V2 yang sama.
-
-## Home dan mod tetamu
-
-Halaman awal ialah Home dengan ilustrasi GeoDecoder dan tiga tindakan:
-
-- **Main** membuka borang nama panggilan dan pilihan mod: **Kuiz 10 Soalan**,
-  **Latihan Pengukuhan 15 Soalan** atau **Duel**. Tetamu tidak perlu mengisi
-  kategori atau kelas. Kuiz/latihan boleh dimainkan offline; Duel memerlukan Internet.
-- **Belajar** membuka modul 3D, nota dan empat Makmal interaktif.
-- **Akaun & kelas** membuka log masuk/daftar untuk kelas, PIN, room dan keputusan
-  guru. Mod kelas memerlukan Internet.
-
-Borang tetamu mempunyai **Kembali ke Home**. Tutorial tiga langkah ditunjukkan
-sebelum permainan tetamu pertama; boleh dilangkau atau dibuka semula melalui
-**Cara main**. Jam solo bermula selepas panduan itu. Semua tetapan berada dalam
-**Tetapan**: Bahasa Melayu/English, tema, muzik, bunyi imbasan, saiz teks
-100/125/150% dan animasi. Pilihan bahasa/paparan tidak memulakan semula permainan.
-Pilihan peranti disimpan jika storan dibenarkan. Iframe modul kekal menggunakan
-tetapan bahasa, saiz teks dan animasi daripada Tetapan utama, termasuk perubahan
-semasa modul dibuka. Butang Tetapan dalam modul membuka dialog utama yang sama.
-Aktiviti, ukuran, tab dan kemajuan bentangan dikekalkan. Calon ini menaik taraf pin
-kepada modul v1.6.0; penyesuai setempat mengekalkan paparan BM/English sedia ada,
-sementara dua fungsi baharu memiliki paparan bahasa natifnya.
-[Kontrak dan bukti penyelarasan](docs/MODULE_SETTINGS.md).
-
-## Duel dengan kawan
-
-Pilih **Main → Duel**, isi nama panggilan dan buka lobi. Pemain pertama cipta
-Duel, salin PIN enam digit dan kongsi kepada kawannya. Pemain kedua masukkan
-PIN itu. Kedua-duanya tekan **Sedia** untuk kira detik tiga saat. Dua pemain
-menjawab sepuluh soalan dalam susunan yang sama; hanya soalan semasa dihantar oleh pelayan. Markah tertinggi menang;
-jika sama, masa tamat pelayan yang lebih pantas menang. Seri disokong.
-
-PIN lobi sah sepuluh minit; had perlawanan 15 minit. Jam Duel terus berjalan
-semasa menu, semakan, tab tersembunyi dan sambungan terputus. Keluar sebelum
-selesai bermaksud menyerah kalah. SessionStorage membolehkan sambung semula
-selepas reload apabila dibenarkan pelayar. Alias dan tindakan Duel dihantar ke
-pelayan; kelas/kategori tidak dihantar. Keputusan Duel tidak masuk papan skor
-kuiz. Protocol 2 memerlukan migration dan Edge Function yang sepadan; lihat
-[handoff semasa](docs/DUEL_V2_HANDOFF.md). Sejarah pengesahan v1.5.0 berada dalam [DUEL.md](docs/DUEL.md).
-
-## Guru
-
-1. Tekan **Akaun dan kelas**, pilih **Daftar akaun** dan peranan **Guru**.
-2. Daftar username (3–24 huruf, nombor atau `_`), nama paparan, email dan kata laluan (10–128 aksara). Sahkan email melalui pautan sebelum log masuk.
-3. Cipta kelas. Kongsi PIN enam digit atau jemput username pelajar yang sudah berdaftar; pelajar menerima jemputan dalam akaunnya.
-4. Lihat roster kelas, carian nama/username dan status aktif. “Aktif sekarang” bermaksud heartbeat diterima dalam 45 saat terakhir.
-5. Cipta bilik, kongsi PIN bilik dan tekan **Mulakan permainan**. Guru memantau soalan semasa, markah, masa menjawab serta keputusan akhir dalam papan skor.
-6. **Tutup bilik** menghentikan percubaan yang belum selesai dan mengekalkan markah separa. Keputusan yang sudah lengkap kekal. Bilik ditutup tidak boleh dibuka semula.
-
-PIN dijana rawak di database, termasuk digit sifar di hadapan, unik dan sah 24 jam. **PIN baharu** membatalkan kod lama dan juga tersedia apabila kod sudah luput. PIN kelas menyertai kelas; PIN bilik menyertai kelas dan bilik itu.
-
-## Pelajar
-
-Daftar peranan **Pelajar**, sahkan email, kemudian masukkan PIN guru atau terima jemputan username. Pelajar yang sudah berada dalam kelas boleh memilih bilik kelasnya. Tunggu guru mula, kemudian tekan **Mula bermain**. Satu percubaan bagi setiap pelajar dalam setiap bilik; buka semula bilik untuk menyambung percubaan yang sama.
-
-Jika sambungan gagal selepas memilih jawapan, **Hantar semula** menghantar ID tindakan yang sama. Markah tidak ditambah dua kali. Buka semula bilik selepas reload untuk mengambil keadaan daripada server. Semakan/kawalan input diselaraskan kepada keadaan server, termasuk jika akaun yang sama digunakan dalam tab lain.
-
-## Peraturan dan masa
-
-Kuiz mempunyai sepuluh soalan unik, dua bagi setiap lima bongkah. Latihan
-Pengukuhan menggunakan semua 15 soalan sekali, tiga bagi setiap bongkah.
-Semua pelajar dalam bilik menerima susunan sepuluh soalan yang sama. Semua
-lima bongkah dan lima bentangan tersedia; susunan dan warna berubah setiap
-soalan. Pilih bentuk, bukan warna.
-
-Imbas bongkah di R1 dahulu, kemudian bentangan di R2. Pasangan betul +1; salah R1/R2 menamatkan satu-satunya percubaan dengan +0. Langkau +0. Petunjuk percuma dikira sekali setiap soalan. Betul mempunyai 900 ms maklum balas; salah/langkau memerlukan semakan sekurang-kurangnya 1.8 saat. Analisis akhir menunjukkan bongkah, R1/R2, topik dan setiap jawapan. R2 yang belum dicuba tidak dikira salah.
-
-**Room:** database menentukan jawapan, markah dan masa. Masa menjawab terus berjalan ketika dialog/jeda dibuka, tab ditinggalkan atau Internet terputus. Masa menunggu mula dan semakan jawapan dikecualikan. Kedudukan: markah tertinggi, kemudian masa menjawab paling singkat. Masa pada paparan dianggarkan antara kemas kini server.
-
-**Kuiz sendiri:** nama panggilan dan maksimum 50 skor disimpan dalam pelayar
-yang sama; jam dijeda ketika dialog atau tab tersembunyi. Ranking kuiz:
-markah, kurang salah, masa. Profil Murid/Pelajar lama dengan kelas dan skor
-retry V1 kekal serasi/berasingan. CSV menggunakan bahasa paparan. Jika storan
-disekat, permainan masih berfungsi dengan rekod sesi sementara. Keputusan
-Latihan 15, latihan semula, room dan Duel tidak masuk papan skor kuiz.
-
-Keputusan mendahulukan markah dan tindakan **Latih soalan salah**, **Main lagi**
-dan **Home**. Buka **Lihat analisis dan semakan jawapan** untuk butiran. Latihan
-semula menggunakan hanya ID soalan salah/dilangkau daripada keputusan asal,
-tanpa menukar skor asal. Semua betul tidak menghasilkan latihan kosong.
-
-Klik/sentuh kad kemudian pengimbas sebagai alternatif seretan. Arahan **R1 —
-Pilih bongkah** bertukar kepada **R2 — Padankan bentangan**. Memilih kad belum
-menggunakan percubaan. Tab, Enter dan Space turut disokong. Jeda animasi dan
-reduced motion mengurangkan gerakan. Tema dan saiz teks dikawal dalam Tetapan.
-
-## BM/English dan rich text
-
-Kamus bahasa dibekalkan bersama aplikasi. Tukar bahasa dalam Tetapan tanpa
-menukar soalan, susunan kad, pilihan, percubaan, hint, markah atau masa sesi.
-Rumus MathML, istilah geometri dan label kebolehcapaian menggunakan renderer
-yang sama. ID soalan dan kunci analitik kekal stabil. Nama pemain, nama kelas,
-username dan PIN dipaparkan secara literal. Lihat [glosari](docs/DWI_GLOSSARY.md)
-dan [kontrak rich text](docs/RICH_TEXT.md).
-
-## Backend hosted
-
-Database PostgreSQL, Auth, Realtime dan Edge Function `geodecoder-auth` sudah disediakan pada projek Supabase Free **GeoDecoder Digital**, region Singapore. URL awam: `https://fkrlwzxvyufndavlpzbp.supabase.co`. Frontend membawa publishable key sahaja; service-role key hanya berada dalam persekitaran Edge Function. Pendaftaran baharu menggunakan email sebenar dengan pengesahan Supabase Auth. Login menerima email atau username. Terlupa kata laluan meminta pautan email dan membuka borang kata laluan baharu hanya selepas sesi pemulihan disahkan. Akaun lama tanpa email masih menggunakan username dan kod pemulihan lama. **Penghantaran email umum memerlukan custom SMTP serta URL redirect; penghantaran email sebenar tidak diuji dalam keluaran ini.** Lihat [EMAIL_SETUP.md](docs/EMAIL_SETUP.md).
-
-Migration gabungan `geodecoder_profile_and_module_progress_v2_6`, versi
-`20261026050330`, berjaya digunakan selepas kebenaran pengguna. Pengesahan
-PostgreSQL hosted `verify_profile.sql` dan `verify_module_progress.sql` lulus;
-semua fixture sintetik di-ROLLBACK. Ini pengesahan kontrak database, berasingan
-daripada ujian Auth pengguna sebenar.
-
-Guru hanya mengurus kelas/bilik sendiri. Pelajar tidak boleh mencipta kelas, membaca kelas guru lain atau menulis markah terus. Skema `private` tidak didedahkan melalui Data API. RLS pada `public.room_progress` mengehadkan bacaan kepada pemilik bilik atau pelajar yang sudah menyertainya. Peranan disalin sekali daripada metadata pendaftaran yang disahkan ke profil peribadi; suntingan metadata selepas pendaftaran tidak menukar peranan atau kebenaran.
-
-Pemantauan guru menggunakan WebSocket dengan fallback refresh 15 saat. Dashboard/pelajar disegar setiap 15 saat; heartbeat 20 saat. Pelan Free mempunyai kuota dan projek boleh dijeda selepas tidak aktif. Rujukan: https://supabase.com/pricing dan https://supabase.com/docs/guides/platform/going-into-prod . Tiada pelan berbayar dipilih. Frontend tersedia sebagai fail HTML dan pada GitHub Pages: https://undead41.github.io/geodecoder-digital/ .
-
-## Pembangunan dan deploy semula
-
-```sh
-cd digital
+```powershell
 npm ci
-npm test
-npm run build
-npm run prepare:pages
-npm run check
+npm run verify
 ```
 
-Node/npm hanya diperlukan untuk pembangunan; dependency dipin melalui
-`package-lock.json`. `dist/index.html` menggunakan `dist/app.bundle.js`.
-Pembina menghasilkan HTML dalam `artifacts/`; `prepare:pages` menyemak alias
-offline dan menyediakan root index private. Mirror Pages menggunakan
-`artifacts/site-index.html` dengan audio berasingan. Tetapan awam projek berada
-dalam `dist/cloud-config.mjs`.
+`npm test` membina keperluan ujian melalui `pretest`. `npm run test:module`
+menjalankan suite modul. `npm run check` menyemak HTML standalone, pin modul,
+token dan parity media. Semua dependency dikunci dalam `package-lock.json`.
 
-Panduan database/RPC: `backend/README.md`. Untuk projek baharu, gunakan `backend/schema.sql`, deploy `backend/auth/index.ts` sebagai Edge Function `geodecoder-auth` dengan `verify_jwt=false` (endpoint signup/login melakukan pengesahan sendiri), dan gunakan environment built-in `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`. Jangan masukkan key server ke frontend. `backend/fix_v2.sql` merekodkan pembetulan alias yang telah digunakan pada projek hosted; schema penuh sudah mengandungi pembetulan itu.
+## Aset dan output
 
-Jalankan `backend/verify.sql` sebagai database owner: seluruh ujian dibatalkan melalui rollback. `GEODECODER_LIVE_TEST=yes node tools/verify-cloud.mjs` ialah ujian integrasi opt-in yang **mencipta akaun/kelas/bilik sintetik sebenar** pada projek dikonfigurasi. Fail credential dalam `artifacts/` adalah sementara dan tidak boleh dicommit. Bersihkan fixture berdasarkan UUID yang direkodkan selepas ujian. Jangan jalankan secara membuta tuli pada projek pengguna lain.
+Edit media dalam `assets/` dan token dalam `design-system/`. Folder `dist/`
+mengekalkan nama asal bagi kod portal yang disunting; hanya fail bundle,
+adapter terjana dan salinan media dikecualikan daripada Git.
 
-Rujukan bank/SHA: `docs/SOURCE.md`. Pin modul akhir dan sumbernya berada dalam
-`vendor/module-release.json`; ia mesti sepadan dengan HTML hasil binaan dalam
-`module/`. Bukti keluaran terdahulu dikekalkan sebagai sejarah; pengesahan
-v2.7.0 dan hadnya berada dalam `docs/RELEASE_V2_7.md`; rekod v2.6.0
-kekal dalam `docs/RELEASE_V2_6.md`. Pengesahan sumber gabungan v2.8.0
-perlu direkodkan selepas ujian calon selesai.
+Selepas build, fail offline canonical ialah
+`artifacts/GeoDecoder_Digital_V2.html`; alias nama V1/V2 dijana untuk keserasian.
+Pakej PWA lengkap berada dalam `artifacts/pwa/`. Modul standalone terjana ialah
+`module/GeoDecoder_Modul_V1.html`. Rujukan komponen terjana ialah
+`artifacts/GeoDecoder_Design_System.html`.
 
-## Muzik latar
+Panduan terperinci: [manifest media](assets/README.md),
+[design system](docs/DESIGN_SYSTEM.md), [kontrak UX](UX-CONTRACT.md),
+[modul](module/README.md), [backend](backend/README.md),
+[pembersihan](docs/maintenance/CLEANUP.md) dan
+[penerbitan](../docs/DIGITAL_PUBLISHING.md).
 
-`rest_site_bg` memainkan menu/Home/akaun/keputusan. `when_open_map_bg` memainkan modul dan permainan. Muzik bermula selepas interaksi pertama, bertukar tanpa pertindihan, berhenti ketika tab tersembunyi dan menyimpan pilihan hidup/mati. Bunyi kesan kuiz menggunakan butang berasingan. Kedua-dua lagu dibekalkan pengguna, dikekalkan durasi penuh dan dioptimumkan kepada MP3 stereo 96 kbps; cover/metadata dibuang. Website memuat audio apabila diperlukan; HTML muat turun membenamkan kedua-dua lagu serta modul.
-
-## Makmal interaktif
-
-Dari Home, pilih **Teroka modul pembelajaran → Makmal interaktif**. Empat aktiviti: **Bina Bentangan**, **Makmal Isi Padu**, **Terbitkan Rumus** dan **Bongkah Gabungan**. Aktiviti menggunakan geometri dan kawalan modul asal; muzik map berjalan sepanjang modul dibuka. Pin tepat direkodkan dalam `vendor/module-release.json`.
-
-
-## Modul dan utility yang diselaraskan
-
-Modul mengekalkan geometri, preset bentangan, studio, perbandingan isi padu,
-bekas terbuka/rongga dan nota daripada v1.4.0. Aktiviti berpandu, langkah
-animasi, Undo, fokus, tema, suara dan rekod latihan disepadukan dalam v1.5.0.
-Cabaran berpandu menerangkan mod yang disokong; penerokaan lain terus tersedia.
-
-v1.6.0 menambah **Studio Pelan & Dongakan**: lima bentuk projek dan dua susunan
-kiub unit, tiga pandangan Kaedah 1 pada skala sama, alat garis/bulatan,
-koordinat papan kekunci, Undo serta semakan geometri setara dengan toleransi
-inklusif 0.06 cm lukisan. **Semakan Langkah Pengiraan** membimbing Rumus →
-Gantian nilai → Pengiraan → Unit bagi 11 bentuk, bekas terbuka terpilih dan
-dua gabungan. Nota/kalkulator membawa ukuran dan π kepada soalan yang sama.
-Kedua-dua fungsi mengikut tetapan induk dan mengekalkan draf dalam sesi, tanpa
-menambah skor atau rekod kepada empat refleksi asal. Draf baharu tidak disimpan
-merentas penutupan HTML dan dibersihkan apabila sesi akaun berubah.
-Lihat [handoff serta had modul v1.6.0](module/docs/HANDOFF_PELAN_PENGIRAAN_V1_6.md).
-
-Profil Saya membenarkan nama paparan dan avatar terbina dalam, dengan butiran
-akaun/kelas baca sahaja. Kata Laluan & Keselamatan mengesahkan identiti semula
-serta menyediakan tindakan log keluar semua sesi. Tetapan Penggunaan
-menyatukan bahasa, saiz teks, kontras, animasi, audio dan pilihan pembelajaran.
-
-Kemajuan tetamu dan setiap akaun kekal berasingan. Rekod latihan ialah refleksi
-kendiri, bukan gred TP atau bukti penguasaan yang disahkan. Guru hanya melihat
-ahli kelas miliknya.
-
-Projek hosted semasa sudah menerima kontrak profile/progress melalui migration
-gabungan versi `20261026050330`. Untuk pemasangan lain yang masih menggunakan
-kontrak lama, migration sumber ialah `backend/profile_v2_3.sql` dan
-`backend/module_progress_v2_4.sql`; sahkan kontrak akhir sebelum mengaktifkan
-frontend gabungan. Pemasangan baharu menggunakan `backend/schema.sql`. Backend
-Duel kekal dalam `backend/duel/`. Push branch tidak memasang migration atau
-mengubah SMTP/Auth secara automatik.
-
-## Design system pusat v1 — integrasi v2.8.0
-
-Panduan pemilik token, komponen, adapter modul dan handoff layout/motion:
-[DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md). Dari folder `digital`, jalankan
-`npm run build`, kemudian buka `artifacts/GeoDecoder_Design_System.html` untuk
-rujukan komponen BM/English yang berfungsi offline. `npm run design:check`
-mengesan drift; `npm run test:design` menguji komponen dan permukaan aplikasi.
-Sumber branch `digitalized-ux-design-system` disatukan dalam calon v2.8.0.
-Token mempunyai satu pemilik dan adapter terjana untuk portal serta modul;
-komponen berkongsi tema/kontras, tipografi, kawalan, fokus dan keadaan interaksi.
-Semakan branch terdahulu ialah bukti sumber; semakan gabungan v2.8.0 masih perlu
-diselesaikan. Design system tidak menukar backend, pemarkahan atau geometri.
+README dan penerbitan terdahulu boleh dibaca melalui tag
+`archive/digital-before-cleanup-20261106`. Bukti sejarah mengekalkan tarikh,
+versi dan sumber asalnya.

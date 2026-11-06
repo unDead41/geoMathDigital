@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "reviewed_base": "6313d2281b7bf621ca380c3beb78bbc94bef63f6",
+  "assets": [
+    {
+      "source": "assets/audio/menu.mp3",
+      "bytes": 2161058,
+      "sha256": "9843f7da5eb33dcde18e83401debf2d82e1355a07cea0df5e4a696b1e123b0b4",
+      "original_git_blob": "84aa7525f2c4a04cfd8ac750ad79fec77353e32f",
+      "original_path": "digital/dist/assets/audio/menu.mp3",
+      "development_outputs": [
+        "dist/assets/audio/menu.mp3"
+      ],
+      "publication_outputs": [
+        "artifacts/pwa/assets/audio/menu.mp3"
+      ]
+    },
+    {
+      "source": "assets/audio/map.mp3",
+      "bytes": 2006517,
+      "sha256": "a86d0abe511f1ef5291c95b27b8aee42338d9dc5970af03d79fdef8e157aacb4",
+      "original_git_blob": "0ef77140fbee08967839da0b1a1fa6770e337c18",
+      "original_path": "digital/dist/assets/audio/map.mp3",
+      "development_outputs": [
+        "dist/assets/audio/map.mp3"
+      ],
+      "publication_outputs": [
+        "artifacts/pwa/assets/audio/map.mp3"
+      ]
+    },
+    {
+      "source": "assets/icons/icon.svg",
+      "bytes": 345,
+      "sha256": "02e68e283b682bb76ad2fbcd3852e32bb3864db106d6221500e868ae9779552c",
+      "original_git_blob": "8ba78063ee75c05a136614c112c789e482cc397f",
+      "original_path": "digital/pwa/icon.svg",
+      "development_outputs": [],
+      "publication_outputs": [
+        "artifacts/pwa/icons/icon.svg"
+      ]
+    }
+  ]
+}

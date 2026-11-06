@@ -11,12 +11,12 @@ export function offlineVersion({html,audio,worker,icon,manifest,assets}){
  return hash.digest('hex').slice(0,24);
 }
 export function buildOfflinePackage({root,html}){
- const audio=['menu','map'].map(name=>fs.readFileSync(path.join(root,`dist/assets/audio/${name}.mp3`)));
+ const audio=['menu','map'].map(name=>fs.readFileSync(path.join(root,`assets/audio/${name}.mp3`)));
  const directory=path.join(root,'artifacts/pwa');
  fs.mkdirSync(path.join(directory,'assets/audio'),{recursive:true});fs.mkdirSync(path.join(directory,'icons'),{recursive:true});
  const output=html.replace('</head>','<meta name="geomath-pwa" content="enabled"><meta name="theme-color" content="#142840"><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icons/icon.svg" type="image/svg+xml"></head>');
  const assets=['index.html','assets/audio/menu.mp3','assets/audio/map.mp3','manifest.webmanifest','icons/icon.svg'];
- const workerTemplate=fs.readFileSync(path.join(source,'sw.js'),'utf8'),icon=fs.readFileSync(path.join(source,'icon.svg'));
+ const workerTemplate=fs.readFileSync(path.join(source,'sw.js'),'utf8'),icon=fs.readFileSync(path.join(source,'../assets/icons/icon.svg'));
  const manifest=JSON.stringify({id:'./',name:'GeoMath',short_name:'GeoMath',lang:'ms',start_url:'./',scope:'./',display:'standalone',background_color:'#F3F7FC',theme_color:'#142840',icons:[{src:'./icons/icon.svg',sizes:'any',type:'image/svg+xml',purpose:'any'}]},null,2)+'\n';
  const version=offlineVersion({html:output,audio,worker:workerTemplate,icon,manifest,assets});
  const worker=workerTemplate.replace('__GEOMATH_VERSION__',JSON.stringify(version)).replace('__GEOMATH_ASSETS__',JSON.stringify(assets));

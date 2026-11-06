@@ -7,3 +7,7 @@ __pycache__/
 .env.*
 !.env.example
 supabase/.temp/
+
+# Source branch is separate from the Pages snapshot
+/index.html
+/.nojekyll

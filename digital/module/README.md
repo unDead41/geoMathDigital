@@ -1,3 +1,5 @@
+> `GeoDecoder_Modul_V1.html` ialah hasil build. Jalankan `npm run build` atau `npm test` dari folder ini untuk menjananya. Fail sumber, 11 model dan ujian kekal dalam repository; salinan HTML lama berada dalam tag arkib pembersihan.
+
 # Modul Pembelajaran GeoDecoder Digital V1
 
 Versi modul: **v1.6.2**. Branch semakan: **digitalized-ux-mockup-completion**.

@@ -7,12 +7,12 @@ import {organizeBranches, runCli} from '../tools/organize-branches.mjs';
 
 const token = 'fixture-secret-never-log';
 const a = 'a'.repeat(40), b = 'b'.repeat(40), changed = 'c'.repeat(40);
-const preserved = ['main-digitalized', 'main', 'sharing', 'codex/game-flow-rgb', 'codex/question-audio-elevenlabs', 'codex/question-bank-harmonised-lcd', 'codex/serial-unassign', 'testing/components'];
+const preserved = ['main-digitalized', 'main'];
 const rows = [
   {from:'digitalize', to:'digitalized-core-portal', sha:a},
   {from:'digital-dwi', to:'digitalized-game-language', sha:b}
 ];
-const registry = (renames = rows) => ({schemaVersion:1, repository:'unDead41/geodecoder', publicationBranch:'main-digitalized', protectedBranches:preserved, renames});
+const registry = (renames = rows) => ({schemaVersion:1, repository:'unDead41/geoMathDigital', publicationBranch:'main-digitalized', protectedBranches:preserved, renames});
 
 function api(initial, intercept = async () => undefined) {
   const refs = new Map(Object.entries(initial)), calls = [];
@@ -22,12 +22,12 @@ function api(initial, intercept = async () => undefined) {
     const replacement = await intercept(call, refs, calls);
     if (replacement) return replacement;
     const pathname = new URL(url).pathname;
-    const prefix = '/repos/unDead41/geodecoder';
+    const prefix = '/repos/unDead41/geoMathDigital';
     assert.equal(new URL(url).origin, 'https://api.github.com');
     if (init.method === 'GET' && pathname.startsWith(prefix + '/git/ref/heads/')) {
       const name = decodeURIComponent(pathname.slice((prefix + '/git/ref/heads/').length));
       return refs.has(name)
-        ? Response.json({ref:'refs/heads/' + name, node_id:'fixture-ref', url, object:{type:'commit', sha:refs.get(name), url:'https://api.github.com/repos/unDead41/geodecoder/git/commits/' + refs.get(name)}})
+        ? Response.json({ref:'refs/heads/' + name, node_id:'fixture-ref', url, object:{type:'commit', sha:refs.get(name), url:'https://api.github.com/repos/unDead41/geoMathDigital/git/commits/' + refs.get(name)}})
         : Response.json({message:'Not Found'}, {status:404});
     }
     if (init.method === 'POST' && pathname.startsWith(prefix + '/branches/') && pathname.endsWith('/rename')) {
@@ -36,7 +36,7 @@ function api(initial, intercept = async () => undefined) {
       if (!refs.has(from) || refs.has(to)) return Response.json({message:'Conflict'}, {status:422});
       const sha = refs.get(from);
       refs.delete(from); refs.set(to, sha);
-      return Response.json({name:to, commit:{sha, url:'https://api.github.com/repos/unDead41/geodecoder/commits/' + sha}, protected:false}, {status:201});
+      return Response.json({name:to, commit:{sha, url:'https://api.github.com/repos/unDead41/geoMathDigital/commits/' + sha}, protected:false}, {status:201});
     }
     assert.fail('Unexpected API operation: ' + init.method + ' ' + pathname);
   };
@@ -124,8 +124,8 @@ test('apply uses native rename only and emits receipts after exact target verifi
   assert.equal(result.renamed, 2);
   assert.equal(result.pending, 0);
   assert.deepEqual(writes(mock).map(call=>[call.method, call.url, JSON.parse(call.body)]), [
-    ['POST', 'https://api.github.com/repos/unDead41/geodecoder/branches/digitalize/rename', {new_name:'digitalized-core-portal'}],
-    ['POST', 'https://api.github.com/repos/unDead41/geodecoder/branches/digital-dwi/rename', {new_name:'digitalized-game-language'}]
+    ['POST', 'https://api.github.com/repos/unDead41/geoMathDigital/branches/digitalize/rename', {new_name:'digitalized-core-portal'}],
+    ['POST', 'https://api.github.com/repos/unDead41/geoMathDigital/branches/digital-dwi/rename', {new_name:'digitalized-game-language'}]
   ]);
   assert.equal(receipts.length, 2);
   assert.equal(mock.refs.get('main'), changed);
@@ -239,7 +239,7 @@ test('checked-in registry is accepted and its full rename set can be reviewed wi
   const input = JSON.parse(await readFile(new URL('../docs/branch-registry.json', import.meta.url), 'utf8'));
   const mock = api(Object.fromEntries(input.renames.map(row=>[row.from,row.sha])));
   const result = await organizeBranches(options(mock, {registry:input}));
-  assert.equal(result.pending, 11);
-  assert.equal(mock.calls.length, 22);
+  assert.equal(result.pending, 0);
+  assert.equal(mock.calls.length, 0);
   assert.equal(writes(mock).length, 0);
 });

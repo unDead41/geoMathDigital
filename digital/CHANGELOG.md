@@ -1,5 +1,13 @@
 # GeoDecoder Digital changelog
 
+## v2.10.1 — 6 November 2026
+
+- Consolidate the remaining UI/UX concept reference into main.
+- Keep one original copy of each audio/icon asset with byte fingerprints.
+- Generate offline aliases, PWA files, bundles and module/token adapters during build.
+- Archive retired branch snapshots and remove superseded vendor/build files.
+- Add clean-checkout builds and asset parity checks; preserve the reviewed runtime module.
+
 ## v2.10.0 — 4 November 2026
 
 - Terbitkan log masuk Google pada UI akaun v2.9.1, menggunakan sesi Supabase sedia ada dan callback HTTPS canonical.

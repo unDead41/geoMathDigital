@@ -9,3 +9,12 @@
 - Check working tree and remote branch before editing. Preserve unrelated work; use explicit refs and do not force-push.
 - Run `python3 tools/check_repository_scope.py` before publication. Never import the mixed repository tree or merge another platform.
 - These instructions supersede historical monorepo branch/path assumptions in archived planning/handoff documents. New work must use the repository named above and its current `main`.
+
+## Clean source policy
+
+- Branches: `main` owns source; `main-digitalized` is the existing Pages snapshot.
+- Original runtime media is owned by `digital/assets/manifest.json`. Preserve fingerprints unless an asset change is intended.
+- Build outputs and compatibility HTML aliases are ignored, regenerated files. Never commit them to main.
+- Use `cd digital && npm ci && npm run verify` for a fresh checkout. Run the root scope checker before publishing.
+- Historical repository split records live at `docs/archive/repository-split-20261106/`.
+- Read `digital/docs/maintenance/CLEANUP.md` before restoring an archived branch.

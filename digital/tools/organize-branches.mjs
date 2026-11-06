@@ -2,9 +2,9 @@ import {readFile} from 'node:fs/promises';
 import {setTimeout as delay} from 'node:timers/promises';
 import {pathToFileURL} from 'node:url';
 
-const repository = 'unDead41/geodecoder';
+const repository = 'unDead41/geoMathDigital';
 const publicationBranch = 'main-digitalized';
-const preserved = ['main-digitalized', 'main', 'sharing', 'codex/game-flow-rgb', 'codex/question-audio-elevenlabs', 'codex/question-bank-harmonised-lcd', 'codex/serial-unassign', 'testing/components'];
+const preserved = ['main-digitalized', 'main'];
 const shaPattern = /^[a-f0-9]{40}$/;
 const defaultRegistry = new URL('../docs/branch-registry.json', import.meta.url);
 
@@ -13,10 +13,10 @@ const fail = message => { throw new OrganizationError(message); };
 
 function validateRegistry(input) {
   if (input?.schemaVersion !== 1 || input.repository !== repository || input.publicationBranch !== publicationBranch)
-    fail('Invalid registry identity; only the private GeoDecoder source repository is allowed.');
+    fail('Invalid registry identity; only the GeoMath Digital source repository is allowed.');
   if (!Array.isArray(input.protectedBranches) || !preserved.every(name=>input.protectedBranches.includes(name)))
     fail('Invalid registry: all preserved branches must be listed.');
-  if (!Array.isArray(input.renames) || !input.renames.length) fail('Invalid registry: rename rows are required.');
+  if (!Array.isArray(input.renames)) fail('Invalid registry: rename rows are required.');
   const blocked = new Set([...preserved, ...input.protectedBranches]);
   const sources = new Set(), destinations = new Set();
   const rows = input.renames.map(row=>{

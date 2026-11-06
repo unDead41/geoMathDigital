@@ -6,3 +6,16 @@ backend/.migration-parts/
 dist/qa-*
 dist/app.qa.bundle.js
 dist/geodecoder-design-qa-*/
+
+# Reproducible build outputs
+GeoDecoder_Digital_V*.html
+dist/GeoDecoder_Digital_V*.html
+dist/app.bundle.js
+dist/assets/
+module/GeoDecoder_Modul_V1.html
+dist/design-tokens.css
+dist/module-design.mjs
+module/src/central-tokens.mjs
+module/src/design-tokens.css
+docs/design-system-evidence/GeoDecoder_Design_System.html
+backend/security/qa/GeoDecoder_Session_QA.html

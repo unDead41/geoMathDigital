@@ -5,7 +5,9 @@ import {build} from 'esbuild';
 import {execFileSync} from 'node:child_process';
 import {buildDesignReference} from './design-reference.mjs';
 import {buildOfflinePackage} from './offline-package.mjs';
+import {copyRuntimeMedia} from './assets.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+copyRuntimeMedia({root});
 execFileSync(process.execPath,[path.join(root,'tools/design-tokens.mjs')],{stdio:'inherit'});
 const moduleRelease=JSON.parse(fs.readFileSync(path.join(root,'vendor/module-release.json'),'utf8'));
 const template=fs.readFileSync(path.join(root,'dist/index.html'),'utf8');
@@ -26,7 +28,7 @@ let offline=javascript;
 for(const name of ['menu','map']){
   const needle=JSON.stringify(`./assets/audio/${name}.mp3`);
   if(offline.split(needle).length!==2)throw new Error(`Expected exactly one ${name} track URL in the bundle`);
-  const embedded=JSON.stringify('data:audio/mpeg;base64,'+fs.readFileSync(path.join(root,`dist/assets/audio/${name}.mp3`)).toString('base64'));
+  const embedded=JSON.stringify('data:audio/mpeg;base64,'+fs.readFileSync(path.join(root,`assets/audio/${name}.mp3`)).toString('base64'));
   offline=offline.replaceAll(needle,()=>embedded);
 }
 const html=page(offline);

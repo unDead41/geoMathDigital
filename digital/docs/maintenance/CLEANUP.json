@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "base": "6313d2281b7bf621ca380c3beb78bbc94bef63f6",
+  "version": "2.10.1",
+  "status": "verified",
+  "pages": {
+    "branch": "main-digitalized",
+    "sha": "287155b5414a38e57d722446616228569b1ede68",
+    "changed": false
+  },
+  "archive_tag": "archive/digital-before-cleanup-20261106",
+  "original_branches": [
+    {
+      "name": "digitalize/security-activeSession",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-classroom-crud",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-core-backend",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-core-backend-scaling",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-core-portal",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-game-duel",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-game-duel-ui-refresh",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-game-language",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-module-content",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-module-design",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-module-explore-ui-refresh",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-module-guided",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-module-labs-ui-refresh",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-module-pelan-pengiraan",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-module-studio-ui-refresh",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-release-legacy",
+      "sha": "d33e10c7c565aee08f503a028dbe597fbddf744c"
+    },
+    {
+      "name": "digitalized-utility-auth-email",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-utility-auth-providers",
+      "sha": "05f3622c4f334e1e12a913cca3dfc96db6bc5bd2"
+    },
+    {
+      "name": "digitalized-utility-help-support",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-utility-offline-sync",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-utility-preferences",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-utility-profile",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-utility-save-resume",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-utility-security",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-ux-design-system",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-ux-mockup-completion",
+      "sha": "45d225ec540fbe4f99dca2f3623b5fee786130ab"
+    },
+    {
+      "name": "digitalized-ux-motion-audio",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-ux-ui-upgrade",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "digitalized-ux-usability",
+      "sha": "efffa95e77ed9b8e310079b91c227a7468134a09"
+    },
+    {
+      "name": "main",
+      "sha": "6313d2281b7bf621ca380c3beb78bbc94bef63f6"
+    },
+    {
+      "name": "main-digital",
+      "sha": "8cce135102618ffad2c1de46063fcb5042ba0907"
+    },
+    {
+      "name": "main-digitalized",
+      "sha": "287155b5414a38e57d722446616228569b1ede68"
+    },
+    {
+      "name": "migration/verified-20261106",
+      "sha": "8655dd17ffa693cd1e2df52c791c136fa6adeb2e"
+    },
+    {
+      "name": "source/main-digitalized",
+      "sha": "05f3622c4f334e1e12a913cca3dfc96db6bc5bd2"
+    },
+    {
+      "name": "ui/ux-redesign-concept",
+      "sha": "4074dffc29cbd5a0922049c2ebb056ca3c293b31"
+    }
+  ],
+  "concept_commit": "4074dffc29cbd5a0922049c2ebb056ca3c293b31",
+  "removed_files": [
+    {
+      "path": "digital/artifacts/GeoDecoder_Design_System.html",
+      "blob": "36d018ad338a13126f7d537cd5265341212e9eb9",
+      "bytes": 321532,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/artifacts/GeoDecoder_Digital_V1.html",
+      "blob": "cfd80723d447b69aecf504e7ff12a3a637436276",
+      "bytes": 7882995,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/artifacts/GeoDecoder_Digital_V2.html",
+      "blob": "cfd80723d447b69aecf504e7ff12a3a637436276",
+      "bytes": 7882995,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/artifacts/pwa/assets/audio/map.mp3",
+      "blob": "0ef77140fbee08967839da0b1a1fa6770e337c18",
+      "bytes": 2006517,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/artifacts/pwa/assets/audio/menu.mp3",
+      "blob": "84aa7525f2c4a04cfd8ac750ad79fec77353e32f",
+      "bytes": 2161058,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/artifacts/pwa/icons/icon.svg",
+      "blob": "8ba78063ee75c05a136614c112c789e482cc397f",
+      "bytes": 345,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/artifacts/pwa/index.html",
+      "blob": "4fcd18b53d48ee192b86e0f17635be21e912106c",
+      "bytes": 2326425,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/artifacts/pwa/manifest.webmanifest",
+      "blob": "f03b608492a289f80a08881f56c4acda3ed675a8",
+      "bytes": 346,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/artifacts/pwa/sw.js",
+      "blob": "4883871e2b6e809d96f63e0396bb9f4966eed7c2",
+      "bytes": 2503,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/artifacts/site-index.html",
+      "blob": "4fcd18b53d48ee192b86e0f17635be21e912106c",
+      "bytes": 2326425,
+      "reason": "generated output"
+    },
+    {
+      "path": "index.html",
+      "blob": "cfd80723d447b69aecf504e7ff12a3a637436276",
+      "bytes": 7882995,
+      "reason": "generated output"
+    },
+    {
+      "path": ".nojekyll",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/GeoDecoder_Digital_V1.html",
+      "blob": "cfd80723d447b69aecf504e7ff12a3a637436276",
+      "bytes": 7882995,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/GeoDecoder_Digital_V2.html",
+      "blob": "cfd80723d447b69aecf504e7ff12a3a637436276",
+      "bytes": 7882995,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/dist/GeoDecoder_Digital_V1.html",
+      "blob": "cfd80723d447b69aecf504e7ff12a3a637436276",
+      "bytes": 7882995,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/dist/GeoDecoder_Digital_V2.html",
+      "blob": "cfd80723d447b69aecf504e7ff12a3a637436276",
+      "bytes": 7882995,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/dist/app.bundle.js",
+      "blob": "5797d7837af7f14bf267a6e80998060bbd9b7438",
+      "bytes": 1939164,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/module/GeoDecoder_Modul_V1.html",
+      "blob": "3af0469979d878c8e605d093db1be0c0649c6509",
+      "bytes": 572718,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/dist/design-tokens.css",
+      "blob": "f43c3012e0e655af03235a33d58c907327e942bb",
+      "bytes": 5577,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/dist/module-design.mjs",
+      "blob": "61daa3fbddd10bb2fa90cfa4cef4a9112846310d",
+      "bytes": 7324,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/module/src/central-tokens.mjs",
+      "blob": "b5b43ee24d9acc71dd6f4a8298bbbfbbcad7f5c9",
+      "bytes": 12319,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/module/src/design-tokens.css",
+      "blob": "907c91e72610ce78985ad842db1b2d3817a999a9",
+      "bytes": 5621,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/docs/design-system-evidence/GeoDecoder_Design_System.html",
+      "blob": "36d018ad338a13126f7d537cd5265341212e9eb9",
+      "bytes": 321532,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/backend/security/qa/GeoDecoder_Session_QA.html",
+      "blob": "998d0db0a32bc2225b01c1992946b9a112bfd081",
+      "bytes": 561327,
+      "reason": "generated output"
+    },
+    {
+      "path": "digital/vendor/module-v1.5.0.html",
+      "blob": "3be574ca0992d82944269a00c6f5faabe89a85ae",
+      "bytes": 315817,
+      "reason": "archived superseded vendor snapshot"
+    },
+    {
+      "path": "digital/vendor/module-v1.6.0.html",
+      "blob": "84b23a992e59e709bff7d1df9901f80b937a8471",
+      "bytes": 469716,
+      "reason": "archived superseded vendor snapshot"
+    },
+    {
+      "path": "digital/vendor/module-v1.6.1.html",
+      "blob": "88e29085c17f0ff21993ba0799848833695acad1",
+      "bytes": 541207,
+      "reason": "archived superseded vendor snapshot"
+    }
+  ],
+  "protected_runtime_and_backend_blobs": {
+    "digital/backend/README.md": "fbfc03b053d158a7bc77eee86b97ff2c1db6384e",
+    "digital/backend/auth-providers/README.md": "d2a7c6391436805c60927ed6c958b29bc159c405",
+    "digital/backend/auth-providers/provider-status.mjs": "b1765710fc0c7831e08070cb0486ce86c41c80ee",
+    "digital/backend/auth-providers/verification.sql": "ca679d39ccf0fbe4a4bcec6e4eca3325268a585e",
+    "digital/backend/auth/index.ts": "98a4c49aff9f4a0dda7f0e555ff5cc6144cbdf8e",
+    "digital/backend/classroom-crud/README.md": "1d54c0e50b4ed34d6709d14e905152eeb342520f",
+    "digital/backend/duel/config.toml": "706c82256bde47daed08bdc68bb87d10d22d826e",
+    "digital/backend/duel/functions/geodecoder-duel/handler.mjs": "c8b0e4636b6613d9e3d29af491e7bccb1b3ee23f",
+    "digital/backend/duel/functions/geodecoder-duel/index.ts": "397af8a36474eaf3dfa24978a8e23a0cb4b60cf8",
+    "digital/backend/duel/functions/geodecoder-duel/questions.mjs": "801fa44fbe7b260466de762d52c7ce4bfa61b498",
+    "digital/backend/duel/rollback-v2.sql": "df1ae64dcfdb8742761143290266c664b05bcf91",
+    "digital/backend/duel/schema.sql": "a89226fca89b471385ef569cfac38e2c6a25dbc2",
+    "digital/backend/duel/supabase/migrations/20261026091324_duel_durable_review_v2.sql": "626b4ad3861738c6b4335333bd1a0e8b539dd192",
+    "digital/backend/duel/verify-live.mjs": "aaf2a605078e0e96ea02686ae7c55a91a17c1eb3",
+    "digital/backend/duel/verify-local.mjs": "c9adc5bd623cbe31dd574f8021489a1761b95e78",
+    "digital/backend/duel/verify-v2.sql": "b7c05b70a8d23474c2fb5b4fcf763d249cbf1a31",
+    "digital/backend/duel/verify.sql": "fb58352a9a1e9c244e66f61a1eea491dcd43b14f",
+    "digital/backend/email/README.md": "29f8485b2080a689d6bc364930fb968024dfbd29",
+    "digital/backend/email/manifest.json": "08d96bec41e7ff022d4c81fecc7d6ffa594caadc",
+    "digital/backend/email/templates.mjs": "bfe4eb239f5481f20812a03165f5c848ca8480a7",
+    "digital/backend/email/templates/confirmation.html": "b24965dea48c400083b4e83f83eb0154b4205200",
+    "digital/backend/email/templates/email_change.html": "b5abda3a7a7e323e07e073fb52c56f5d0d9002b7",
+    "digital/backend/email/templates/email_changed_notification.html": "ae1116e00b6e61e42281db4a4f1568f89d6f1ac2",
+    "digital/backend/email/templates/invite.html": "77a99cb51cc7ab2121db2d97a4a460362aebed74",
+    "digital/backend/email/templates/magic_link.html": "4f2fcc70bd74b7e6f57e6fef3de63dce56b6a092",
+    "digital/backend/email/templates/password_changed_notification.html": "2a127a3253fe42edc4113bf18dd6713568951085",
+    "digital/backend/email/templates/reauthentication.html": "80d6ba9641ae2bba1a5a3ddef78d0bf60db00ffe",
+    "digital/backend/email/templates/recovery.html": "08e356074799e14a0ecaef9c7513d46e6a6ee2bc",
+    "digital/backend/email_v2_2.sql": "230c23e074fcbfb73c1173735efe405219155b71",
+    "digital/backend/fix_v2.sql": "6ce0e1e35e3d4310d879d5ed05b5cc484a24a943",
+    "digital/backend/module_progress_v2_4.sql": "1f87e6b3b7f1d9415c786be38f7db855694a7012",
+    "digital/backend/offline-sync.sql": "8ab6a1e7506d1efae88c344cfe4120d082772d90",
+    "digital/backend/operations/README.md": "15e445692c2d4dcfbe72f9d1fbc00721c6e19af9",
+    "digital/backend/operations/RECHECK_HANDOFF.md": "48adff363028e0160773ee39eae6ffb4ca2ff3d6",
+    "digital/backend/operations/audit-20261026.json": "b22f20c35946e1a489e8c5d7d3578ce6face4b56",
+    "digital/backend/operations/check-history.mjs": "dbd49ca48925b84f33e0f98d00cc5b940d4e7e31",
+    "digital/backend/operations/deployment-plan.json": "55985ef3cc2d13d82eef494d2b15819e74e2a092",
+    "digital/backend/profile_class_details_v2_7.sql": "0cb0ad1cf8d6f536e6c6aaf0d006ac7a792981c9",
+    "digital/backend/profile_v2_3.sql": "c709dceeb2d464a382bc9c888ab054397f1c668d",
+    "digital/backend/scaling/.gitignore": "8e127d8288969fd177792120ff2432b429000539",
+    "digital/backend/scaling/README.md": "bf8e4e7e968c8611ed1793019f195a0e96d37154",
+    "digital/backend/scaling/diagnostics.sql": "48c646cd5af64aee3b1c69248b5c934a9329f3c3",
+    "digital/backend/scaling/fingerprints.json": "5fe52f67e3b7af8c0e65bfadc7f8697c788aa9ed",
+    "digital/backend/scaling/k6.mjs": "7ea134df6938cb9b0ed53e9bb6aaa5d711d8e928",
+    "digital/backend/scaling/load-policy.mjs": "26bd0ce104d796436b0abab09a2faba348a43def",
+    "digital/backend/scaling/local-smoke.mjs": "cc1304d9ba850c6cc577b3ee35bb1eef7e419358",
+    "digital/backend/scaling/rollback.sql": "c2f1b75b01aae4953b4dc0f43583e82a766d471d",
+    "digital/backend/scaling/supabase/migrations/20261104014211_geodecoder_scaling_v1.sql": "32a8dc38f4e2eda40f0c8a33a84b149b8d884ee8",
+    "digital/backend/schema.sql": "ee03247a496b7b373d89d7fbe93954c98c4c652f",
+    "digital/backend/security/README.md": "58b707a9fbc47ad14acc73762a71bd2c39437e33",
+    "digital/backend/security/qa/README.md": "c2a6ecb528f8756cefa74e919a8b15501a3040aa",
+    "digital/backend/security/qa/browser.mjs": "212fef2a1bf5dd6392e9660203e23c1bb3a4ad0a",
+    "digital/backend/security/qa/build.mjs": "42384afb8355a21bfd935906350b947217ec9e16",
+    "digital/backend/security/qa/index.html": "6ff8ed0dcc7964e2f6432aaf83a5c162f6fd9816",
+    "digital/backend/security/qa/ui.mjs": "ebc98bcea7a480137fbbbb4886db428dda7ca7e8",
+    "digital/backend/security/supabase/.gitignore": "1ac89fa0f88e637b0b8efe38ffb5b49c1cef0e76",
+    "digital/backend/security/supabase/migrations/20261026090539_geodecoder_security_sessions.sql": "c441473dba0934e1eab1e14e4548b61f84d5c52b",
+    "digital/backend/security/verify-live.mjs": "2fd6fdb37651d781b8dc8918bfed8cead935248e",
+    "digital/backend/verify.sql": "47b3ea056fb55aafa3cdc711291304e74f2d710b",
+    "digital/backend/verify_email.sql": "9a6fd4cd8c18caec90aa856ccea4250bf1dc042e",
+    "digital/backend/verify_module_progress.sql": "cad68b21764cf108a9635f127a6490f219e4644c",
+    "digital/backend/verify_profile.sql": "032547072ce13f82f94bd466d91bab0b073e2de2",
+    "digital/dist/account-copy.mjs": "e6218406f0e016f246aa544a41118b6fd5a67031",
+    "digital/dist/account-security.mjs": "cd4a8c5f3411cef8fd07f6e1e570115602c7425d",
+    "digital/dist/active-sessions.mjs": "edb75ec9acb3ea2748199578392031b30230441b",
+    "digital/dist/app.mjs": "a910034931016e4298f52bfb689fb41e7ecad5ec",
+    "digital/dist/art.mjs": "7188c6bc122a6d446456351b9f786e494c923a5e",
+    "digital/dist/auth-provider-copy.mjs": "8a5ef985468b1787e4fdf189e80bdb1140e7ebd8",
+    "digital/dist/auth-providers.mjs": "c230b01ec92add71f367157c3c1c131ad1e8cc8c",
+    "digital/dist/auth-view.mjs": "c089345971c18e0c3c31fb968f77e8337839588b",
+    "digital/dist/classroom-copy.mjs": "9620d7ea752db129aa19cfa15f9477fa28277766",
+    "digital/dist/cloud-config.mjs": "5e9d3d17ae835939486f3f02850f6df2e89e45c1",
+    "digital/dist/cloud.mjs": "5593d56637bdb36cc8ba43be9f5b0955497b2b65",
+    "digital/dist/core.mjs": "ed73fe1d8297dbc3d9af9155d760f443616e4c8c",
+    "digital/dist/duel-state.mjs": "bd7d821064d99b0565c9f11d57e1c72d6b8140d9",
+    "digital/dist/duel.mjs": "2d9ba80cc89b09de7daba106daa3961d6c6409f2",
+    "digital/dist/entry-art.mjs": "fa08b6dfa6a280b8de079e3d5bf7b4728073ad56",
+    "digital/dist/entry-components.mjs": "45621770affadd83fbf06d1457e1ae0def2fa36c",
+    "digital/dist/entry-copy.mjs": "e40b5e7c987f69de89a17ae8ba1de6e3314afc4a",
+    "digital/dist/entry-models.mjs": "c07831f04d94a8151e4bc00e514086fdc2452182",
+    "digital/dist/entry-scenes.mjs": "46d911b1c493aa0302221d1654914908fc6c8db5",
+    "digital/dist/entry-software-renderer.mjs": "e93c11b5ab393c8834c21cb0c8fc190bef4e88c1",
+    "digital/dist/entry-ui.mjs": "b9a7c957976808f4df5bbd25eeac3448378c6a88",
+    "digital/dist/entry.css": "15005f0bc57f133315200a456713b6f56a709888",
+    "digital/dist/format.mjs": "82ce6e326260f9d89e873963fe9acf0cc0da59ab",
+    "digital/dist/foundation.css": "57fd9aa6deadb09daabe8d4c55b0ea73c99c4249",
+    "digital/dist/help-copy.mjs": "54e5b99547bdb2460e40b8232d2211f7952ba047",
+    "digital/dist/help-support.css": "fd0892dd066b316be98234a48e86f544e818eb05",
+    "digital/dist/help-support.mjs": "7d83335667341f244c95a4cd02c8256923857ae5",
+    "digital/dist/help-visuals.mjs": "3693e7b9f521a2ba076eeaa8b9d80d54ff304865",
+    "digital/dist/i18n.mjs": "ebf3b2e916b86ed975ce25794fecdae0050cc3a7",
+    "digital/dist/index.html": "33d7a3e995c428dd35118bc3eb1d356954a0b0fd",
+    "digital/dist/module-copy.mjs": "001dd5f9be0bd783d73564d001de6be382196ca0",
+    "digital/dist/module-foundation.css": "4aa735035d300a8a90f952621c4a3e2813c4cc0d",
+    "digital/dist/module-frame.mjs": "cf1fabd31fae02d8f99599ee55f1e5b2a5b9c6f9",
+    "digital/dist/module-language.mjs": "b5f9f289d8d2ed23074659103a65829e9f4ad054",
+    "digital/dist/module-progress-view.mjs": "7284904c55522360b0e1221947ebdd854902eecb",
+    "digital/dist/module-progress.mjs": "d8bfbaf2c6a65cbbf6ab1f8fc46808ac7360c85e",
+    "digital/dist/module-settings.mjs": "ed7424a4be420beb34216b6ce8c6f11c386021b8",
+    "digital/dist/music.mjs": "28046ad0b86f9e005d6c9689a730b98e9aeea3aa",
+    "digital/dist/network-policy.mjs": "e84c4a4327143028a40f4b3a1a2f04a65edb160d",
+    "digital/dist/offline-db.mjs": "265def342d3e45771c0d0d21974f877fc4dbc95f",
+    "digital/dist/offline-package-client.mjs": "a7198f41691ca316f2fd3356c6057a066e9a28b3",
+    "digital/dist/offline-records.mjs": "1095f75a99cc52d531cd3ac273965dfad79abec4",
+    "digital/dist/offline-runtime.mjs": "9a8b0f0f4b6112727c9e6b0576175695af97da24",
+    "digital/dist/offline-sync.mjs": "001b62bb8db1ae7bdeb9c542309de85d56b750fe",
+    "digital/dist/offline-view.mjs": "b739f2917953d3d91efc14933fc91804d667529b",
+    "digital/dist/portal-copy.mjs": "df8ce8804fe3eb692036ffe116014940ef844229",
+    "digital/dist/portal.css": "563894a881692a908c6033c0f04368047a5863db",
+    "digital/dist/portal.mjs": "0705fbcc66b369a42caa59f78d5491d276fe480a",
+    "digital/dist/preferences.mjs": "5f9bccb010390819015a2861d6e04d04743071b4",
+    "digital/dist/profile-view.mjs": "937f01597f00d623e00e94b418df819afdcc5ee4",
+    "digital/dist/questions.mjs": "f1368f40149231d359de74d3bdef53f7ad9b27be",
+    "digital/dist/security-view.mjs": "80287493027f18653ed9fad460ec3c1b86f45da8",
+    "digital/dist/session-copy.mjs": "0e51df018c2c5e3a4457b1a74c5befece6e35015",
+    "digital/dist/settings.mjs": "4552c8ef7c94203a30a0da46fec4dfd41ab6bb49",
+    "digital/dist/solo-save.mjs": "681b577f920e290cd7bf737899d2622203b0dde5",
+    "digital/dist/storage.mjs": "83fe2157c8e724063ab870a9726824c847386185",
+    "digital/dist/style.css": "4f9216d5c2aa8b58f57fe4d96ed23628756eca0c",
+    "digital/dist/support-report.mjs": "bcaa0be1ab6ab624f882debd79816e8709f17a22",
+    "digital/dist/theme.mjs": "feeaa5ade21f1791aee9aa09e1440b80fe8b796e",
+    "digital/dist/usability-copy.mjs": "595f41ca775a5a9bcb420d2cfefa9090316fbab2",
+    "digital/dist/usability-ui.mjs": "5611137bb92c311d86ac284bb757d5050ef2d5c9",
+    "digital/dist/usability.css": "60608cbee9b18c8d7f70b9f6d7e3c8016512670c",
+    "digital/dist/usability.mjs": "da19ef2e34eff3bbe4b89fd3025dc621d64b5c3c",
+    "digital/dist/visuals.mjs": "8427f5cf93e785735d340e7e825a723cc572f797",
+    "digital/docs/question_bank.reference.h": "9577c9c280b8a437edaf8fb8af21a04de4d64585",
+    "digital/module/src/accessibility.mjs": "eac9692ce0d9e9167d1f859ebba8eff2cde8cf9b",
+    "digital/module/src/app.mjs": "54d79dac1d3a53300b8b36d4b86f7cad56de201c",
+    "digital/module/src/calculation-steps.mjs": "87013cc606ac3758661d0037fbf95cd5654ff706",
+    "digital/module/src/calculation-workshop.css": "8ca181edfecafbfcfe0e43e2fc68c765c6ce73d3",
+    "digital/module/src/calculation-workshop.mjs": "ff6f6f373b67bb6a2aeebc962366c6ba857a5cdb",
+    "digital/module/src/content.mjs": "8e757a7a777929d0e256d4dd570464e0a4217224",
+    "digital/module/src/design-system.mjs": "8e8e08aa9c6f649399bbec3cfdcf686e573ab84f",
+    "digital/module/src/geometry.mjs": "f399dbbdeaaea8874ac54f2c74305e3b690fa628",
+    "digital/module/src/guided.mjs": "2e1ffe9a104c6f71cc0d3caf5df1d3654da0c3b4",
+    "digital/module/src/index.html": "950b0591cf49e1b57ecdeee907ea57c859e4758d",
+    "digital/module/src/lab-geometry.mjs": "37aa7bb48a3d401b7bcd2a7e8d46ca17e2f4b765",
+    "digital/module/src/labs.mjs": "c75a6e0c75bb36329b4cd6779376d218c74c8cff",
+    "digital/module/src/learning-mesh.mjs": "02d8621fe45a33b1c908f702ad60f8f0827cd364",
+    "digital/module/src/lessons.mjs": "56fab529e0393b94baf3377c6012ada8b744733f",
+    "digital/module/src/net-print.mjs": "f44b4c0074c9c8f12db75ed853faea4e39c1db67",
+    "digital/module/src/net-studio-geometry.mjs": "f1c9058beda091372fe92e9da45e67110924c385",
+    "digital/module/src/net-studio.mjs": "bc4daa83499e789d52cd77ac05f566f3fe241273",
+    "digital/module/src/net-tools.css": "915654486a354f422ed8004326748a3835627390",
+    "digital/module/src/notes.mjs": "23a2f10f39d2968ebe5ca3ef0240f9d5db02d104",
+    "digital/module/src/preset-nets.mjs": "b8156072fd12a9e9c4d98d4d06c38dddd3f969ad",
+    "digital/module/src/projection-geometry.mjs": "65d1be264ba6fad1b152d29981e928cfc6a73d4d",
+    "digital/module/src/projection-studio.css": "02c1e551b8123c52df967004508fba0a4d518fec",
+    "digital/module/src/projection-studio.mjs": "5d464de665bfb41b8415ef6738d10e7a15769516",
+    "digital/module/src/renderer.mjs": "821c6cc6ac0964ef94485a388647fa67ddfc55e9",
+    "digital/module/src/style.css": "f21ffb4473be4dd4e4d7f1c3c24870e36fae7236",
+    "digital/module/src/surface-workshop.mjs": "b025dc359614f365df32edd88522a8718220e091",
+    "digital/module/src/ui.mjs": "d2fb5fd895fb16825e6d526b3ff30f226684455b",
+    "digital/module/src/volume-lab.mjs": "49f880e36cc0797a093f1bdc99d38a35de644c64",
+    "digital/module/src/volume-transfer.mjs": "e4d4729b36ae64bb86762ac8764a52a19ef9ecbe",
+    "digital/vendor/module-v1.6.2.html": "3af0469979d878c8e605d093db1be0c0649c6509",
+    "supabase/.gitignore": "1bf53eb899d793b804bb7e771a0c246c9fabd72d",
+    "supabase/config.toml": "ec616171d8b300de5f10c3be0be7f6e62166c6ff",
+    "supabase/hosted-history.json": "4059120400fd999a9143f2d55dda8df89d827ded",
+    "supabase/migrations/20261025172311_geodecoder_classroom_v2_01.sql": "e65250ac4c9491d8731219abad41d2551f8f6623",
+    "supabase/migrations/20261025172740_geodecoder_classroom_v2_02.sql": "5b4d829aaa7b66e36cf41da8d7f337744cc4eef3",
+    "supabase/migrations/20261025172928_geodecoder_classroom_v2_03.sql": "956e42c5ee0d39aba1d92655d9c2ba7d17c2796c",
+    "supabase/migrations/20261025173022_geodecoder_classroom_v2_04.sql": "6d7ce235d5946c82ee20e0131d056fcc89f530ce",
+    "supabase/migrations/20261025173354_geodecoder_classroom_v2_bank_alias.sql": "9c6707ffbb75aafb36d234e8ab511470842b6d72",
+    "supabase/migrations/20261025175447_geodecoder_room_membership_capability.sql": "efcea336b6b9eca9c62e5436d21833d8072c65ab",
+    "supabase/migrations/20261025181814_geodecoder_duel_v1.sql": "b403043971b2c7a6e378747adc22df3582e1c822",
+    "supabase/migrations/20261025193222_geodecoder_email_signup_v2_2.sql": "529873ba4736903bf597c7d04ff56070fb175e6b",
+    "supabase/migrations/20261026050330_geodecoder_profile_and_module_progress_v2_6.sql": "8cb75c05fd357a55948a19a24cd1b88d843f9e71",
+    "supabase/migrations/20261026091211_geodecoder_security_sessions.sql": "c441473dba0934e1eab1e14e4548b61f84d5c52b",
+    "supabase/migrations/20261026110959_geodecoder_digital_v2_7_integration.sql": "612d67c985c90d208364ce4e8354f08472ccf361",
+    "supabase/migrations/20261104014958_geodecoder_classroom_crud.sql": "fd6e69d8c6f8bc319fa94ac2d58a079ba9c34cc6",
+    "supabase/migrations/20261104053103_geodecoder_auth_providers.sql": "e864122b53fb4ab3cd46fbb9053d41a2db739d86"
+  },
+  "baseline": {
+    "files": 1140,
+    "bytes": 144402286
+  },
+  "kept_duplicates": "Historical evidence/fixtures and migration history retain their original context; deployment email templates and the current reviewed module pin remain versioned.",
+  "archive_commit": "1beaeda50e344f92dc997c3d00f5ac23064c2e4f",
+  "verification": {
+    "node_tests": [
+      543,
+      341
+    ],
+    "node_pass": [
+      543,
+      341
+    ],
+    "node_fail": [
+      0,
+      0
+    ],
+    "scope": "passed",
+    "asset_parity": "passed",
+    "build": "passed",
+    "publication_preparation": "passed"
+  },
+  "clean_source": {
+    "files_before_report_refresh": 1137,
+    "bytes_before_report_refresh": 93285737
+  }
+}
